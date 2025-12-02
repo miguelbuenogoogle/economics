@@ -1,0 +1,4424 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[hang,flushmargin]{footmisc}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\lstset{
+language=HTML,
+basicstyle=\ttfamily
+}
+\begin{document}
+
+\title{Principles of Microeconomics}
+\author{Miguel Bueno, Adjunct Assistant Professor of Economics}
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\section*{About the Notes}
+
+The name of this course is Principles of Microeconomics. By the end of the
+course the expectation is that you will have an understanding of microeconomic
+systems including descriptions and theories of: scarcity, marginality,
+specialization and trade, equilibrium, elasticity, factor markets, market
+structures and externalities. This course is structured to fulfill the general
+education requirements, as well as provide a foundation for current and
+prospective economics majors. We will be covering modern microeconomic ideas
+and theories.
+
+“Not your high-school gym coach's economics course.”
+
+The course has a reputation of being more difficult than the standard social 
+science or business class. While other social science disciplines may use math 
+to some extent, economics is unique in its extensive use of mathematical models
+to describe social phenomena. As such, we’ll be making frequent use of
+mathematical concepts you learned in algebra. For these reasons it's important
+that you stay on top of the material, ask questions, and try not to fall behind.
+
+In fact, when I first took this course as an undergraduate in 2015, I failed it.
+It wasn’t until I took it a second time - and took it more seriously - that I 
+passed.
+
+\subsection*{About the Instructor}
+
+The primary material is presented in black font. Key terms are \textbf{bolded},. Equations
+and mathematical notation in gray are fundamental. Students are responsible for
+understanding this material. Less visible grayed-out material and footnotes are
+not required reading and are only intended to offer additional insights for
+advanced students.
+
+\subsection*{Math Prerequisites}
+
+The following exercises provide an indication of the level of algebra
+proficiency that is required to master the material in this class.
+
+\begin{enumerate}
+    \item Given the following function
+    $$f(x) = 5x+15$$
+    Find $f(0)$, $f(2)$, $f(-3)$, and $f^{-1}(x)$.
+    \item Given the following function
+    $$f(x) = 2x+3$$
+    find the $x$ and $y$ intercepts.
+    \item Given the system of linear equations
+    $$g(x) = 2x+10$$
+    $$h(x) = -4x+20$$
+    find the values of $x$ that solves the system and its corresponding
+    $g(x),h(x)$.
+\end{enumerate}
+
+\newpage
+
+\section{Introduction}
+
+\subsection{What is Economics?}
+
+Some text here.
+\footnote{Consistent with Alfred Marshall’s 1890 definition. 
+Lionel Robbins’s definition incorporating scarcity is perhaps the most
+    widely used. Marshall’s definition focuses on the practical and societal
+    implications of economic activity whereas Robbin’s really leans into
+    abstraction, predominantly leaning into problems of constrained
+    optimization. The latter, in my opinion, has always felt a little more
+    obscure. Hence, I anchor to the former.}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Economics]
+    Economics is the study of the production, distribution, and consumption of goods
+    and services.
+\end{definition}
+\end{tcolorbox}
+
+    At its core, Economics is a social science.
+
+    Thus, it concerns itself with theories that can help explain the certain
+    behaviors of individuals, groups, and organizations, including the choices
+    they make and the impact of those choices.
+
+\subsubsection{Microeconomics and Macroeconomics}
+
+Economics is often divided into two main branches: Microeconomics and 
+Macroeconomics.
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Macroeconomics]
+    Macroeconomics is the study of the economy as a whole. Unemployment,
+    inflation, growth, etc. 
+\end{definition}
+\end{tcolorbox}
+
+Macroeconomics aids in the understanding and mitigating of economic crises.
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Microeconomics]
+    Microeconomics is the study of how individuals and businesses make
+    decisions. Individual consumption, business production, market structures
+    etc.
+\end{definition}
+\end{tcolorbox}
+
+Microeconomics aids in the understanding of how markets function, where 
+they fail and how policy interventions can offer reconciliation.
+
+    Economics is often confused with other disciplines, such as:
+    \begin{enumerate}
+        \item Money: Economics is much broader than the study of money. The production,
+    allocation, and consumption of goods and services need not necessitate
+    money.
+        \item Finance: Finance primarily focuses on the management of investments. In some
+    respects, Finance can be considered a subfield of economics.
+        \item Business: Business primarily focuses on managing an individual organization versus
+    understanding the broader system.
+        \item Politics: Politics relates to the study of governance, influence and power.
+    \end{enumerate}
+
+    Through economics we have the capability to improve the world in some way.
+
+    Alleviate the harsh realities of child poverty, address economic mobility,
+    mitigate the devastating impact of homelessness, expand healthcare access
+    and strengthen retirement security.
+
+    \subsection{Why study Economics?}
+
+    According to the University of California, Economics is their fourth and
+    fifth highest earning major two years and ten years after graduation,
+    respectively.
+
+
+
+    Figure 1: Earnings 2 years after graduation by UC bachelors major
+
+    Figure 2: Earnings 10 years after graduation by UC bachelors major
+
+
+
+    \subsection{Who are Economists?}
+
+    Anyone can be labeled an economist. There are various positions in industry
+    such as economic analyst or economist. Whether one deeply engages with
+    economic theory is dependent on the role. Regardless, these private sector
+    economists directly serve the needs of the organization.
+
+    However, most economic ideas, including those we’ll study in this course are
+     developed, polished, or curated by academic economists at research
+     universities and other institutions. Academic economists are dedicated to
+     the advancement of economic theory and understanding.
+
+    To that end, many ideas we’ll talk about in this course originate with
+    professor Alfred Marshall at the University of Cambridge.
+    \footnote{Principles of Economics (1890) introduced "classical" economics
+    concepts like supply \& demand, marginal utility, and production costs into a 
+    single body of work.}
+
+    \subsection{Economic Theory}
+
+    Economic ideas are formalized through economic theory. Modern economic
+    theories are often formalized through mathematics. This was not always the
+    case and only became popular in the mid 1800s. \footnote{First by William
+    Stanley Jevons and Léon Walras, and then by Kenneth Arrow and Gérard Debreu
+    in the mid-1900s.}The goal here is to encourage
+    precision and clarity; make it easier to communicate complex ideas and
+    ensure everyone is in agreement about what we’re talking about.
+
+    Economic theory is inherently iterative; Economic theories, like all ideas,
+    are subject to revision based on new evidence.
+
+    Additionally, different theories that offer different explanations can often
+    coexist.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Neoclassical Economics]
+    Neoclassical economics is a mainstream economic theory that emerged in the
+    late 1800s century.  
+    \end{definition}
+    \end{tcolorbox}
+
+    Neoclassical economics \footnote{The term was originally introduced by
+    American sociologist and economist Thorstein Veblen in his 1900 article
+    Preconceptions of Economic Science.} is still the dominant economic paradigm
+    worldwide and serves as the foundation of our standard undergraduate Economics
+    education. However, there are academic efforts to move beyond it.
+
+
+
+    It was partly developed in response to the mass production introduced by the
+    Industrial Revolution in Europe and the U.S., and it marked a departure from
+    economic philosophy -often referred to as political economy- into an
+    analytical study of economic phenomena.
+
+    However, U.S. and global industries have changed considerably since the
+    1800s.
+
+    Namely, the world has witnessed the role of economies of scale,
+    globalization, the rise of intangible assets, and concentration of market
+    power.
+
+    Simultaneously,  the emergence of “big data" in the 1990s caused a pivot
+    away from theory to empirical work. \footnote{See Angrist’s Economic
+    Research Evolves: Fields and Styles (2017).}
+
+    The costs of gathering, transmitting, and analyzing data become incredibly
+    low, making it much much easier to do empirical work.
+
+    Hence, in this class and in my own thinking, I adopt an input-focused or
+    functional approach to economics while still adhering to the standard
+    neoclassical curriculum.
+
+    That is, I tend to emphasize underlying factors influencing supply and
+    demand, while critically evaluating the often-untested assumptions about
+    their relationships embedded in neoclassical models.
+
+    This approach is less about answering questions and more about raising
+    questions and getting you to think more deeply than perhaps you’ve probably
+    thought before.
+
+    Therefore, I’ll often ask questions like:
+
+    “What do we believe this thing might be a function of?”
+
+    “What do we believe that function may look like? Is it downward sloping?
+    Could it be straight or curved?”
+
+    \subsection{Rational Choice Theory}
+
+    Neoclassical economic theory views entire markets and economies as the sum
+    of countless individual decisions. Rational choice theory \footnote{
+        See Hammond’s Rationality in Economics (1997) or Steele’s Decision
+        Theory, The Stanford Encyclopedia of Philosophy (2020) for a more in
+        depth discussion.
+    } provides a
+    framework to understand these individual choices, making it a natural
+    starting point.
+
+    To model human behavior economists typically rely on a simplifying
+    assumption of instrumental rationality.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Instrumental Rationality]
+        Within the context of economics, Instrumental Rationality refers to a
+        mode of thinking that involves
+        being able to state your preferences and beliefs and using all
+        information that is immediately available to you take actions to
+        achieve goals that are logically \footnote{Preferences that are complete
+        and transitive, implying a total set and maximal element.} with those
+        preferences and
+        beliefs.
+    \end{definition}
+    \end{tcolorbox}
+
+    In a few cases, a decision-making agent may seem to have clear and
+    measurable objectives. 
+    
+    For example:
+    \begin{enumerate}
+        \item A football team may want to score more points than their opponent.
+        \item A corporation may want to maximize profits.
+    \end{enumerate} 
+    
+
+
+    In other cases, it may be more obscure.
+
+    What are the goals of a college or university?
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Bounded Rationality]
+        Bounded Rationality refers to a mode of thinking that involves taking
+        actions to achieve goals that are satisficing (good enough) rather than
+        optimal, due to limitations in processing information, time, and
+        cognitive resources.
+    \end{definition}
+    \end{tcolorbox}
+
+    Individuals rely on heuristics a lot.
+
+For this class, we’ll primarily focus on the Instrumental Rationality, while occasionally borrowing and alluding to ideas of Bounded Rationality.
+
+    \subsection{Cost Benefit Analysis}
+
+    You’ll engage in an activity, $q$, if the benefit, $B$ is greater than the
+    cost, $C$:
+
+    $$B(q)>C(q)$$
+
+    It’d sure be nice to assign numbers to these values. As a consumer, one
+    such mechanism is to hypothesize your willingness to pay for something. We
+    refer to this as the reservation price.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+        \begin{definition}[Reservation price]
+        A reservation price $p_{R}$ is the highest price that a consumer is
+        willing to pay for a good or service or the lowest price that a producer is
+        willing to accept for a good or service.
+        \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+        \begin{definition}[Economic Surplus]
+            Economic surplus $ES$ is the monetary gain a consumer or producer
+            receives because the price they pay (or accept) for a good or service is
+            less than the price they are willing to pay (or accept).
+            $$ES := |p_{R}-p_{m}|$$
+        \end{definition}
+    \end{tcolorbox}
+
+    What is the reservation price for the following items?
+    \begin{enumerate}
+        \item A morning cup of coffee
+        \item Cutting to the front of a line
+        \item Grandma’s hugs
+    \end{enumerate}
+    
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Opportunity Cost]
+        The opportunity cost is the value of the next best alternative
+        foregone when a choice is made.
+    \end{definition}
+    \end{tcolorbox}
+
+    Every choice has an opportunity cost because resources are limited. Namely,
+    opportunity cost arises because of scarcity.
+
+    What is the opportunity cost of the following choices?
+    
+    \begin{enumerate}
+        \item Buying a new car
+        \item Going to college
+    \end{enumerate}
+
+    You should think on the margin when considering how much of something to
+    consume or produce.
+
+    We established that, for a given $q$, you’ll engage if, $B(q)>C(q)$. Can we go
+    further? Namely, can we back out a $q$ where you’ll stop engaging? Certainly.
+    To do so we introduce two new concepts.
+    
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Marginal Benefit]
+        The marginal benefit $mb$ is the additional benefit received by
+        consuming an additional unit of some good or service.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Marginal Cost]
+        The marginal cost $mc$ is the additional cost incurred by consuming an
+        additional unit of some good or service.
+    \end{definition}
+    \end{tcolorbox}
+
+
+    We can quantify the marginal benefit of consuming a good, service, or activity by
+    assigning our reservation price to it $$mb=p_{R}$$
+
+    Likewise, the the marginal cost from the consumer perspective is just the
+    price of the good $$mc=p_{E}$$
+
+    Consumers will keep consuming units of a good or service until they reach
+    the quantity $q$ where their marginal benefit is equal to their marginal
+    cost, $mb=mc$. 
+    
+    Mathematically, this is the consequence of maximizing some net benefit function,
+    Namely, the difference between some benefit and cost function.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{proof}[Optimal Stopping Rule]
+        \begin{align*}
+            \max[B(q)-C(q)] & \implies \frac{dB(q)}{dq}-\frac{dC(q)}{dq} = 0 \\
+            & \implies \frac{dB(q)}{dq} = \frac{dC(q)}{dq} \\
+            & \implies mb = mc
+        \end{align*}
+    \end{proof}
+    \end{tcolorbox}
+
+    Why until $mb = mc$?
+
+    The narrative is that consumers will always make the decision to consume one
+    more unit of a good while the marginal benefit if greater than the marginal
+    cost, $mb > mc$.
+
+    Clearly they would not choose to consume where $mb < mc$, since
+    the cost outweighs the benefit. However, if $mb > mc$ they would consume
+    another unit of the good and keep doing so until their marginal utility
+    diminishes enough such that $mb=mc$.
+
+    Likewise, sellers will keep producing units of a good or service until they
+    reach the quantity.
+
+    Interdependence
+
+    \begin{enumerate}
+        \item Constraints
+        \item Agent dependencies
+        \item Temporal dependencies
+    \end{enumerate}    
+
+    \subsubsection{Cost Fallacies}
+
+    Implicit costs represent the opportunity costs of using resources in one way
+    rather than in their next best alternative use.
+
+    The rational agent always considers all costs, explicit and implicit.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Sunk costs]
+    Sunk costs are costs that have already been incurred and cannot be
+    recovered.
+    \end{definition}
+    \end{tcolorbox}
+
+    At any moment in time the rational agent only considers their actions based
+    on current alternatives.
+
+    Examples:
+
+    My mother at the grocery store.
+
+    Some text on framing.\footnote{Initially demonstrated
+        by psychologists Daniel Kahneman and Amos Tversky in The Framing of
+        Decisions and the Psychology of Choice (1981).}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Framing]
+        Framing is the way in which information is presented to individuals,
+        which can influence their perceptions, decisions, and behaviors
+        involving otherwise identical options.
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Free shipping.
+
+    \newpage
+
+\section{Utility and Beliefs}
+
+This section is for advanced students.
+
+    \subsection{Utility}
+
+    Utility is a measure of the satisfaction or benefit that a consumer derives
+    from consuming goods and services. It is a fundamental concept in economics
+    that helps explain consumer behavior and decision-making.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Utility]
+        Utility $U$ is a measure of the satisfaction or benefit derived from
+        consuming goods and services.
+    \end{definition}
+    \end{tcolorbox}
+
+    Utility is often represented as a function of the quantities of goods and
+    services consumed, such as $U(x,y)$, where $x$ and $y$ are the quantities of
+    two different goods.
+
+    The utility function \footnote{Sometimes refered to as the representation
+    function.} can take various forms, depending on the assumptions
+    made about consumer preferences. Some common forms include:
+
+\begin{enumerate}
+    \item Instantaneous Preferences $$U(x,y)=ax+by$$
+    \item Temporal Preferences $$U(x,y)=\sum_{1}^{T} \delta^{t}(ax+by)$$ decisions
+    over time, discounted utility model
+        \begin{enumerate}
+            \item Exponential discounting
+            \item Quasi-hyperbolic discounting
+        \end{enumerate}
+    \item Risk Preferences $$U(x,y)=E[\sum_{1}^{T} \delta^{t}(ax+by)]$$ decisions
+    among uncertainty, expected utility model
+        \begin{enumerate}
+            \item Diminishing marginal return of wealth
+        \end{enumerate}
+    \item Social Preferences $$U(x,y, u(.)) = E[\sum_{1}^{T} \delta^{t}(ax+by)+\alpha u(.)]$$
+    \begin{enumerate}
+        \item Distributional preferences
+        \item Face-saving preferences
+        \item Intentions-based preferences
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+    \newpage
+
+\section{Demand and Consumer Choice}
+
+    \subsection{The Demand Curve}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Demand Curve]
+        A demand curve $q_{d}(p)$ is a function mapping quantities demanded of a good or
+        service by a consumer, $q_{d}$, at every single price, $p$.
+    \end{definition}
+    \end{tcolorbox}
+
+    The table below specifies how much of a good a consumer will demand at a
+    given price.
+
+    Table 1: A Consumer’s Demand Schedule
+
+    \begin{enumerate}
+        \item How much will the consumer demand at \$3?
+        \item What about \$5?
+        \item What about \$7?
+        \item At what price will the consumer demand 4 units of the good? 
+        \item What about 6 units?
+        \item Can we think of a function that can quantify this relationship?
+    \end{enumerate}
+
+    We can plot this function on a graph.
+
+    Alternatively, we can plot the Inverse Demand Curve.
+
+    \subsection{The Inverse Demand Curve}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Inverse Demand Curve]
+        An inverse demand curve, $p(q_{d})$, is a function mapping prices of a good or
+        service,  $p$, at every single quantity demanded, $q_{d}$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Likewise, we can plot this function on a graph.
+
+    Why do we plot price on the y-axis? Isn't price the independent variable?
+
+    Mostly historical, since that’s the way that Alfred Marshall drew his graphs
+    in Principles of Economics 1890. \footnote{Marshall’s decision to place
+    price on the vertical axis in his economic graphs was influenced by his
+    perspective that quantity was the independent variable, with prices
+    adjusting to clear the market. Augustin Cournot (1838), Jules Dupuit (1844),
+    and Fleeming Jenkin (1870) placed price on the horizontal axis, while Karl
+    Rau (1841), Hans von Mangoldt (1863), and William Stanley Jevons (1871) used
+    the vertical axis. Marshall was aware of the works of Cournot, Dupuit,
+    Jenkin, and Jevons, but only Jevons had price on the vertical axis, as
+    Marshall did. Despite Cournot being Marshall's main influence, Cournot used
+    the horizontal axis for price.}
+
+    \subsection{The Law of Demand}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Law of Demand]
+        The law of demand is 
+        an economic principle that states, holding all other things constant,
+        there is an inverse relationship between the price of a good and the
+        quantity demanded of that good. 
+        $$\frac{d q_d(p)}{d p} < 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Some text on the law of demand.\footnote{Coined by Charles Davenant in 1699
+    in Probable Methods of Making People Gainers in the Balance of Trade.}
+
+    Namely, as the price goes up, the quantity demanded decreases. As the price
+    goes down, the quantity demanded increases. 
+
+    The underlying assumption that governs the law of demand is the assumption
+    of diminishing marginal benefit or diminishing marginal returns or
+    diminishing marginal utility
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Diminishing Marginal Benefit]
+        Diminishing marginal benefit is an economic principle that states that
+        as consumption of a good or service increases, the additional
+        satisfaction or utility gained from each extra unit of consumption
+        decreases.
+        $$\frac{d^{2} q_d(p)}{d^{2} p} < 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Some text here. \footnote{The idea was developed by William Stanley Jevons
+    in his Theory of Political Economy (1862) in response to the Labor Theory of
+    Value and Adam Smith’s Paradox of Value. It was also independently developed by Carl Menger and Leon Walras in the 1870s.}
+
+    Example: The first slice of pizza is delicious. The second slice is still
+    good. With the third slice you are full. The fourth slice would make you
+    uncomfortably full. Because each unit yields a smaller marginal benefit,
+    your willingness to pay for each additional unit declines.
+
+    Mathematically, this can be expressed by defining some utility function,
+    $U(q)$, that is monotonically increasing, $\frac{dU(q)}{dq} > 0$, and
+    strictly concave, $\frac{d^{2}U(q)}{dq}<0$
+
+    The mathematical implication of diminishing marginal benefit is that our
+    models of individual demand curves are downward sloping.
+
+    \begin{enumerate}
+    \item Linear functions: $q_d(p) =-mp+q_{d}(0)$
+    \item Quadratic functions: $q_{d}(p)=-p^{2}+q_{d}(0)$
+    \item Rational functions: $q_{d}(p) = \frac{1}{p}$
+    \end{enumerate}
+
+    In our class, we’ll be working with downward sloping linear functions. This
+    is another \textbf{big assumption}.
+
+    This amounts to having constant diminishing marginal benefit or constant
+    elasticity of demand, something we’ll talk about later.
+
+    From the buyer’s perspective the price of a good is the marginal cost
+    $p=mc$.
+
+    However, remember that a buyer will keep consuming until $mc=mb$. So,
+    they’ll keep consuming until $p=mb$.
+
+    This is all just saying the same thing, right? Except we’re just specifying
+    whether we’re talking about some arbitrary concept of benefit or cost, or
+    instead quantifying those costs and benefits via the pricing system.
+
+    In the real world it takes buyers a while to discover their own marginal
+    benefit.
+
+    If the assumption of diminishing marginal benefit is not true, then the
+    law of demand will not hold.\footnote{Not entirely true as demonstraed by
+    Hicks (1939).}
+
+    Fortunately, there’s some experimental evidence. \footnote{See Horowitz
+    et.al’s A Test of Diminishing Marginal Value (2006).}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Choke Price]
+        A choke price $p_{0}$ is the price at which a consumer will not buy a
+        single unit of the good.
+        $$p_{0} := p(0)$$
+    \end{definition}
+    \end{tcolorbox}
+
+    This is technically not the same as the reservation price, $p_{R}$.
+    \footnote{However, the two are related. Namely, the consumer choke price is
+    the supremum (or least upper bound) of their reservation price.}
+
+\subsection{Deviations from the Law of Demand}
+
+Consumers often use price as a proxy for quality --- especially when they lack
+perfect information, or product quality is difficult to verify before purchase
+(e.g., wine, education, skincare, or professional repairs). This creates a 
+\textbf{quality heuristic}, in which a low price is interpreted as a signal of 
+low quality. 
+
+As a result, the demand curve may flatten or even slope upward for low price
+ranges. When prices are too low, consumers may suspect inferior quality and buy
+less, even though the product is cheaper. In these cases, price is not simply a
+cost but also an \emph{informational cue}.
+
+Some consumers may also wish to \emph{look rich}, not merely to be comfortable.
+They may care about how their observable consumption compares to others. Such
+\textbf{status-seeking behavior} gives rise to what economists call
+\textbf{Veblen effects}. For these \emph{positional goods}
+\footnote{See Hirsch's The Social Limits to Growth (1976)}, a higher price can
+increase the good's desirability because it signals social rank \footnote{For
+more information see Veblen's Thoery of the Leisure Class (1899) and Bagwell and
+Bernheim's Veblen Effects in a Theory of Conspicuous Consumption (1996)}.
+\footnote{Note that these Veblen effects differ from asset speculation or 
+price-based expectations.}
+
+In contrast to ordinary goods, where higher prices reduce quantity demanded,
+Veblen goods may exhibit a locally \emph{upward-sloping demand curve}:
+
+$$
+\frac{d q_{d}}{d p} > 0.
+$$
+
+Both quality heuristics and Veblen effects illustrate that the law of demand is
+a useful generalization, not an absolute law. In real markets, perception,
+information, and social context shape how consumers interpret price changes,
+sometimes reversing the expected relationship between price and quantity
+demanded.
+
+
+
+    \subsection{Additional Determinants of Demand}
+
+    In the example provided above an individual's demand is a function of price
+    and nothing else, $q_{d}(p)$.
+
+    Namely, if you give me the price being charged, then I’ll tell you how much
+    you’ll consume $q_{d}$ at that price $p$.
+
+    However, certainly the price is not the only thing you’ll consider when
+    determining how much of a good or service to consume.
+
+    What other things, besides the price, influence your decision to buy?
+
+    Academic economists have tried to classify most things into 5 other
+    categories.
+
+    Additional determinants of demand include:
+    \begin{enumerate}
+        \item Income, $I$
+        \item Preferences, $U$
+        \item Prices of related goods, $p_{y}$
+        \item Network effects, $S$
+        \item Expectations, $E$
+    \end{enumerate}
+
+    Income is perhaps the most obvious. 
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Income]
+        Income, $I$, is the amount of money a consumer has available to spend on
+        goods and services.
+    \end{definition}
+    \end{tcolorbox}
+    
+    The amount you earn can affect
+    the amount you’ll consume for a good. However, whether it increases or
+    decreases the amount you’ll consume is not obvious.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Normal Good]
+        A normal good is a good for which quantity demanded increases as income
+        increases, $$\frac{\partial q_{d}}{\partial I}>0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Inferior Good]
+        An inferior good is a good for which quantity demanded decreases as
+        income increases $$\frac{\partial q_{d}}{\partial I}<0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Public transportation is a good example. \footnote{Frank 2008.Citation needed.}
+
+    We’ll discuss how to identify if a good is considered a normal good or
+    inferior good later.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Preferences]
+    Preferences, $U$, encompass individual tastes, cultural influences,
+    psychological factors.
+    \end{definition}
+    \end{tcolorbox}
+    
+    They have a clear and direct influence on demand.
+    However, their subjective nature and susceptibility to many influences make
+    them elusive and difficult to pin down.
+
+    Prices of related goods, $p_{y}$, can also influence your consumption of a
+    good.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Complement in Consumption]
+        A complement in consumption is a good $x$ for which quantity demanded
+        increases as the price of a related good $p_{y}$ decreases, 
+        $$\frac{\partial q_{dx}(p)}{\partial p_{y}} < 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Peanut Butter and Jelly
+
+    Mathematically, this can be expressed as $q_{d}(x)p_{y}>0$.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Substitute in Consumption]
+        A substitute in consumption is a good $x$ for which quantity demanded
+        increases as the price of a related good $p_{y}$ increases, 
+        $$\frac{\partial q_{dx}(p)}{\partial p_{y}} > 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Coca-Cola and Pepsi
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Network Effects]
+        A network effect, $S$, is a phenomenon whereby a good or service becomes
+        more valuable to a consumer as more people use it.
+    \end{definition}
+    \end{tcolorbox}
+
+    Although this feels relatively obvious, it was only recently formalized into
+    modern economic theory. \footnote{See Jeffery Rohlf’s A Theory of
+    Interdependent Demand for a Communications Service (1974).}
+
+    Positive Network Effects
+
+    Examples:
+
+    TikTok
+
+    Airbnb
+
+    Negative Network (or Congestion) Effects
+
+    Examples:
+
+    Traffic
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Expectations]
+        Expectations, $E$, are forecasts or views that consumers hold about future
+        prices, incomes, or any of the other variables we mentioned.
+    \end{definition}
+    \end{tcolorbox}
+
+    Some text about expectations. \footnote{The Rational Expectations theory is
+    currently the benchmark paradigm in both micro- and macroeconomics. For more
+    information see John Muth’s original Rational Expectations and the Theory of
+    Price Movements (1962) and Robert E. Lucas Jr.’s Expectations and the
+    Neutrality of Money (1972). See Rational Expectations and Econometric
+    Practice (1981) for a summary of the literature. The approach presupposes
+    that economic agents have a great deal of knowledge about the economy. Some
+    recent research has gone beyond Rational Expectations by developing models
+    of learning behavior with explicit theories of data collection and
+    forecasting.}
+
+    Mathematically, we can capture all of the determinants with the following
+    multivariate function $$q_{d}(p_{x}, I, U,p_{y}, S, E)$$.
+
+    In this class, everything else that may influence your demand is ‘baked’
+    into the demand curve. That is, we’re implicitly capturing them in our demand function by assuming
+    that they’re held constant.This is a \textbf{big assumption} but it will make
+    things more tractable for our class. When these factors change, the demand curve or function changes. 
+    
+    In this class, we’re going to assume that it shifts the curve.
+    Mathematically, we assume that it translates the function,
+    $$q_{d}(p) = q_{d}(p)+c$$ This amounts to increasing or decreasing the
+    consumer’s choke price. This is another \textbf{big assumption}. Namely,
+    we’re assuming there is no compression or stretching of the function. This
+    would amount to increasing or decreasing the elasticity of demand, something
+    we’ll talk about later.
+
+    Increase in demand: An increased quantity is demanded at each and every
+    price
+
+    Decrease in demand: A decreased quantity is demanded at each and every
+    price
+
+    \subsection{Market Demand Curve}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Demand Curve]
+        The market demand curve $Q_{D}(p)$ is the sum of all individual demand
+        curves for a certain good considered at once $$Q_{D}(p, I, p_{y})=
+        \sum_{i}^{N} q_{di}(p,I,p_{y})$$
+    \end{definition}
+    \end{tcolorbox}
+
+    In order to say something about Market Demand, we have to make a very big
+    leap. We’re going to assume a representative agent, that all individuals
+    have the same demand function.
+
+    That is, they have the same reservation prices, choke prices, etc.
+
+    Essentially they’re the same person.
+
+    Under this assumption, the market demand is just the number of buyers times
+    the individual demand curves $$Q_{D}(p)=N \cdot q_{d}(p)$$
+
+    All the factors that may shift individual demand curves also apply to the
+    market demand curve.
+
+    However, for market demand curves, there’s also an additional determinant
+    of demand. The number of buyers, $N$. \footnote{See Gorman polar form.}
+
+    \section{Supply and Producer Choice}
+
+    \subsection{Profit}
+
+    We’re going to treat firms as a single decision maker, ignoring managerial
+    control by shareholders and other authorities within the firm. This is a big
+    assumption.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Profit]
+        Profit $\pi$ is the difference between total revenue (money made)
+        $R$ and total cost (money spent) $C$.
+        $$\pi(R,C) = R-C$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Or more specifically $$\pi(p,q, w) = R(p, q)-C(q,w)$$
+
+    Firms or businesses seek to maximize profits.\footnote{This is obvious but
+    it’s worth appreciating the nuance. Firms don’t maximize production since
+    that would balloon all costs to infinity. Nor do they minimize costs
+    because that would entail shutting down. Therefore, firms strive to find the
+    optimal balance between production and costs, maximizing profits.}
+
+    \subsubsection{Production}
+
+    They seek to maximize profits by producing goods or services using things
+    like labor, machinery, energy, materials, etc.
+
+    Labor refers to the amount of hours worked by employees.
+
+    Capital refers to the machinery.
+
+    Capital is typically consumed over a long period, and the assets are rarely
+    resold.
+
+    \subsection{The Supply Curve}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Supply Curve]
+    A Supply Curve, $q_{s}(p)$, is a function mapping quantities supplied of a good or
+    service by a producer, $q_s$, at every single price, $p$.
+    \end{definition}
+    \end{tcolorbox}
+
+    The table below specifies how much of a good a producer will supply at a
+    given price.
+
+    \begin{enumerate}
+        \item How much will the producer supply at \$3?
+        \item What about \$5?
+        \item What about \$7?
+        \item At what price will the producer supply 4 units of the good?
+        \item What about 6 units?
+        \item Can you think of a function that can quantify this relationship?
+    \end{enumerate}
+
+    We can plot this function on a graph.
+
+    \subsection{The Inverse Supply Curve}
+
+    Alternatively, we can plot the Inverse Supply Curve.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Inverse Supply Curve]
+    The Inverse Supply Curve, $p(q_{s})$, a function mapping
+    prices of a good or service,  p, at every single quantity supplied,
+    $q_{s}$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Likewise, we can plot this function on a graph.
+
+    \subsection{The Law of Supply}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Law of Supply]
+        The law of supply is an economic principle that states, holding all
+        other things constant, there is a direct relationship between the
+        price of a good and the quantity supplied of that good.
+        $$\frac{d q_s(p)}{d p} > 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Namely, as the price goes up, the quantity supplied increases. As the price
+    goes down, the quantity supplied decreases.
+
+    The underlying assumption that governs the law of supply is the assumption
+    of diminishing marginal product or diminishing marginal returns or
+    increasing marginal costs
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Diminishing Marginal Product]
+    Diminishing marginal product, is an economic principle that states that as
+    production of a good or service increases, the marginal (additional) output
+    from each extra unit of input (like labor) will eventually decline,
+    assuming all other inputs remain constant.
+    \end{definition}
+    \end{tcolorbox}
+
+    Example: With one cook, you can make a certain number of pizzas. Adding a
+    second cook might double your output. However, adding a third and fourth
+    cook might lead to overcrowding, confusion, and even slower production as
+    they get in each other’s way.
+
+    Mathematically, this can be expressed by defining some production function,
+    $f(x)$ , that is monotonically increasing and strictly concave, 
+    $\frac{df(x)}{dq} > 0, \frac{d^{2}f(x)}{d^{2}x}<0$.
+
+    Capacity constraints and fixed inputs in the production process are
+    fundamental to diminishing marginal product.
+
+    In reality labor may also be relatively fixed. Namely, hiring takes time.
+
+    The mathematical implication of this is that our models of individual
+    supply curves are upward sloping.
+
+    Examples of downward sloping functions
+
+    \begin{enumerate}
+        \item Linear functions: $q_s(p) = mp+p_{0}$
+        \item Quadratic functions: $q_{s}(p) = p^{2}+p_{0}$
+        \item Logarithmic functions: $q_{s}(p) = \ln(p)$
+    \end{enumerate}
+
+    In our class, we’ll be working with downward sloping linear functions. This
+    is another \textbf{big assumption}. This amounts to having constant
+    diminishing marginal product when capital is fixed and constant returns to
+    scale when capital is variable, something we’ll talk about later. This also
+    amounts to constant elasticity of supply, something we’ll also talk about later.
+
+    From the seller’s perspective the price of a good is the marginal benefit
+    $p=mb$
+
+    However, remember that a seller will keep producing until $mb=mc$. So, they’ll
+    keep producing until $p=mc$.
+
+    Again, we’re just specifying whether we’re talking about some arbitrary
+    concept of benefit or cost, or instead quantifying those costs and benefits
+    via the pricing system.
+
+    In the real world sellers generally have a good understanding of their
+    marginal costs, provided they have a good accounting team.
+
+    If the assumption of diminishing marginal product is not true, then the
+    law of supply will not hold. \footnote{There’s some nuance here. The assumption of diminishing marginal product is a
+    statement about production when some inputs are fixed. For the Law of Supply
+    not to hold in both situations where some inputs are fixed and all inputs
+    are variable both the assumption of diminishing marginal product and the
+    assumption of decreasing returns to scale would need to fail. Otherwise, the
+    supply curve could not slope upward in the “short-run” but slope upward in
+    the “long-run”.}
+
+    There’s mixed evidence whether the majority of firms truly operate at
+    levels of production where increasing marginal costs would constrain supply.
+    \footnote{See John Shea’s Do Supply Curves Slope Up? (1993) and Blinder et.
+    al’s Asking About Prices (1998).}
+    There seems to be some evidence in the literature that the assumption is at
+    least true for commodities. Nevertheless, different industries face
+    different marginal costs so the assumption is far from generalizable.
+    \footnote{See Pindyck’s The Dynamics of Commodity Spot and Futures Markets
+    (2001).}
+
+   \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Choke Price]
+        A seller's choke price $p_{s0}$ is the price at which the seller will
+        not produce a single unit of the good.
+        $$p_{s0} := p(q_{s}=0)$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Typically, the choke price is not zero. Namely, $p_{S0}>0$. Why?
+
+    Because of fixed production costs, something we’ll talk about more later.
+
+    \subsection{The Producer as Price Taker}
+
+    We’ve mentioned that firms make decisions about how much to supply based on
+    production costs and prices. But where does the price come from? Doesn’t the
+    business owner decide their own price?
+
+    We’re about to make another \textbf{big assumption}.
+
+    We’re going to assume that the firm is a “Price Taker” or operates in a
+    Perfectly Competitive Market.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Perfectly Competitive Market]
+        A Perfectly Competitive Market, is a market in which all firms in the industry sell homoge-
+        neous products, and there are many buyers and sellers, each of whom commands a relatively
+        small size of the market.
+    \end{definition}
+    \end{tcolorbox}
+
+    This is a tremendously \textbf{big assumption}, one that we will spend the majority
+    of the third part of the class dismantling.
+
+    The implication of such a market structure is that firms cannot charge
+    higher than the prevailing price. That is, they are a “Price taker”.
+
+    In reality, perfect competition does not exist. There is no market in the
+    world that is perfectly competitive. There may be markets that are
+    relatively close but there are no markets that are exactly perfectly
+    competitive.
+
+    If there is no such thing as a perfectly competitive market then why focus
+    on it? It provides us one end of the measuring stick by which to measure things.
+    The other being Monopoly, something we’ll talk about later in the course.
+
+    \subsection{Additional Determinants of Supply}
+
+    In the example provided above a seller’s supply is a function of price and
+    nothing else, $q_{s}(p)$.
+
+    Namely, if you give me the price being charged, then I’ll tell you how much
+    a producer will supply $q_s$ at that price $p$.
+
+    However, certainly the price is not the only thing sellers consider when
+    determining how much of a good or service to produce.
+
+    What other things, besides the price, might influence a seller’s decision to
+    produce?
+
+    Academic economists have tried to classify most things into 5 other
+    categories.
+
+    Additional determinants of supply include:
+    \begin{enumerate}
+        \item Input Prices, $w$
+        \item Price of related outputs, $p_{y}$
+        \item Productivity and Technology, $A$
+        \item Expectations, $E$
+    \end{enumerate} input prices, price of related
+
+    Input Prices, $w$, specifically the price of labor wL  and the price of
+    capital wk, are perhaps the most obvious. Namely, increases in either of
+    these increase the cost of production, therefore pushing up marginal costs.
+
+    As the price of inputs increases, the quantity supplied decreases at every
+    price.
+
+    Price of related outputs, $p_{y}$, can also have an impact on production of
+    a good.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Complement in Production]
+        A complement in production is a good $x$ for which quantity supplied
+        increases as the price of a related good $y$, $p_{y}$ increases, 
+        $$\frac{\partial q_{s}(x)}{\partial p_{y}} > 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Beef and leather.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Substitute in Production]
+        A substitute in production is a good $x$ for which quantity supplied
+        decreases as the price of a related good $y$, $p_{y}$ increases, 
+        $$\frac{\partial q_{s}(x)}{\partial p_{y}} < 0$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Corn and wheat.
+
+    Mathematically, this can be expressed as $q_{s}(x)p_{y}<0$.
+
+    Productivity and Technology, A, refers to the efficiency with which inputs
+    are converted into outputs.
+
+    Generally, there are two types of productivity improvements. Improvements in:
+
+    Productivity of Labor or Capital.
+
+    (Total or) Multifactor Productivity
+
+    This captures the effects of technological innovations, better management
+    practices, and optimal resource allocation.
+
+    Expectations, E, are forecasts or views that producers hold about future
+    prices, wages, or any of the other variables we mentioned.
+
+    Mathematically, we can capture all of the determinants with the following
+    multivariate function $$q_{s}(p_{x},w,p_{y},A, E)$$
+
+    Just like demand, in this class, everything else that may influence your
+    supply is ‘baked’ into the supply curve.
+
+    That is, we’re implicitly capturing them in our supply function by assuming
+    that they’re held constant.
+
+    This is a \textbf{big assumption} but it will make things more tractable for our
+    class.
+
+    When these factors change, the supply curve or function changes. In this
+    class, we’re going to assume that it shifts the curve.
+
+    Mathematically, we assume that it translates the function,
+    $$q_{s}(p) = q_{s}(p) +c$$ This amounts to increasing or decreasing the
+    producer’s choke price (or fixed costs).This is another \textbf{big assumption}.
+    Namely, we’re assuming there is no compression or stretching of the
+    function. This would amount to increasing or decreasing the elasticity of
+    supply, something we’ll talk about later.
+
+    Increase in supply: An increased quantity is supplied at each and every
+    price
+
+    Decrease in supply: A decreased quantity is supplied at each and every
+    price
+
+    \subsection{Market Supply Curve}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Supply Curve]
+        The Market Supply Curve, $Q_{s}(p)$, is all individual supply
+        curves for a certain good considered at once.
+        $$Q_{s}(p, w) = \sum_{i}^{N} q_{si}(p,w)$$
+    \end{definition}
+    \end{tcolorbox}
+
+    In order to say something about Market Supply, we have to make a very big
+    leap. We’re going to again assume a representative agent, that all firms
+    have the same supply function.
+
+    That is, they have the same cost structure.
+
+    Essentially they’re the same firm.
+
+    Under this assumption, the market supply is just the number of buyers times
+    the individual supply curves $$Q_{s}(p)=Nq_{s}(p)$$
+
+    All the factors that may shift individual supply curves also apply to the
+    market supply curve.
+
+    However, for market supply curves, there’s also an additional determinant of
+    supply. The number of supplies, $N$.
+
+    \newpage
+
+\section{Equilibrium}
+
+    \subsection{Economies}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Planned Economy]
+        A planned economy is an economic system in which the a
+        central authority makes all decisions about the production and
+        distribution of goods and services.
+    \end{definition}
+    \end{tcolorbox}
+
+    This process is usually done by the government.
+
+    Most academic economists agree that North Korea and Cuba are the only
+    countries that maintain elements of a planned economy today.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Economy]
+        A market economy is an economic system in which decisions about
+        production and consumption are made by individual producers and
+        consumers through the price mechanism in markets.
+    \end{definition}
+    \end{tcolorbox}
+
+    Although our market economy feels familiar, its success in generating
+    well-being deserves deeper appreciation and inspection.
+
+    \subsection{Markets}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market]
+    A market is a setting that brings potential producers (sellers) and
+    consumers (buyers) together.
+    \end{definition} 
+\end{tcolorbox}
+
+    The narrative (and philosophy) of markets is that they are successful at
+    generating well-being because they allocate resources efficiently through
+    the price mechanism, balancing supply and demand.
+
+    It is believed (by most economists, politicians, and American citizens) that
+    individuals operating through markets unknowingly contribute to the overall
+    \footnote{See the Pew Research Center’s Stark partisan divisions in
+    Americans’ views of ‘socialism,’ ‘capitalism’ (2019) and In Their Own
+    Words: Behind Americans’ Views of ‘Socialism’ and ‘Capitalism’ (2019) for
+    more information.}
+    good by responding to price signals that reflect scarcity or abundance.
+    \footnote{“From the time of Adam Smith’s Wealth of Nations in 1776, one 
+    recurrent theme of economic analysis has been the remarkable degree of
+    coherence among the vast numbers of individual and seemingly separate
+    decisions about the buying and selling of commodities. In everyday, normal
+    experience, there is something of a balance between the amounts of goods and
+    services that some individuals want to supply and the amounts that other,
+    different individuals want to sell [sic]. Would-be buyers ordinarily count
+    correctly on being able to carry out their intentions, and would-be sellers
+    do not ordinarily find themselves producing great amounts of goods that they
+    cannot sell. This experience of balance is indeed so widespread that it
+    raises no intellectual disquiet among laymen; they take it so much for
+    granted that they are not disposed to understand the mechanism by which it
+    occurs.” Kenneth Arrow 1977}
+    \footnote{“This is the one irrefutable lesson of the entire post-war period,
+    contradicting the notion that rigid government controls are essential to
+    economic development.  The societies that have achieved the most
+    spectacular, broad-based progress are neither the most tightly controlled,
+    nor the biggest in size, nor the wealthiest in natural resources.  No, what
+    unites them all is their willingness to believe in the magic of the
+    marketplace.” Ronald Regan, September 1981 communicating his beliefs to
+    members of the IMF and World Bank.}
+
+    This belief was perhaps best summarized by economist Milton Friedman’s
+    parable on the pencil in his 1980 Free to Choose series. \footnote{See Free
+    to Choose 1980 - Vol. 01 The Power of the Market.}
+
+    This view has been substantiated by many academic research studies.
+
+    Regardless, it's important to recognize that markets can come with their own
+    set of unique issues, issues we’ll explore later in the course.
+
+    \subsection{Perfectly Competitive Markets}
+
+    The supply and demand curves we’ve studied so far are most appropriate for
+    perfectly competitive markets.
+
+    Perfect competition is characterized by the following assumptions:
+    \begin{enumerate}
+        \item \textbf{Infinite number of Buyers and Sellers} each with an infinitesimal share of
+        the market.
+        \item \textbf{Homogenous products}: All firms produce identical products, meaning there are no differences in
+    quality, features, or branding. Consumers see no distinction between
+    products from different firms.
+        \item \textbf{No barriers to entry or exit}: Firms can freely enter or exit the market without facing significant
+    obstacles or costs. This ensures that profits attract new firms and losses
+    drive existing firms out.
+        \item \textbf{Perfect Information}:  All consumers and producers have complete and accurate information about
+    prices, products, and market conditions. There are no “informational
+    asymmetries”. Something we’ll talk about later in the course.
+        \item \textbf{Perfect factor mobility}:    Factors of production (labor, capital, etc.) can move freely between
+    different uses or locations without any friction.
+        \item \textbf{No externalities}: Something we’ll talk about later in the course.
+        \item \textbf{No transaction costs}.
+    \end{enumerate}
+
+    Example: Even hot-dog stands can fail to be perfectly competitive if there
+    are high transaction costs.
+
+    The implication of these assumptions is that firms are price takers.
+
+    Mathematically, this conclusion can be drawn by deriving the firm’s price
+    elasticity of residual demand and showing that as the number of firms
+    increases the elasticity converges to infinity.
+
+    \subsection{Equilibrium}
+
+    In the physical sciences, equilibrium refers to a solution with no tendency
+    of change. 
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Equilibrium]
+        (Market) equilibrium is a state of the market where quantity demanded is equal
+        to quantity supplied, $Q_{d}(p)=Qs(p)$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Every seller who would like to sell a product can find a buyer, and every
+    buyer a seller.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Equilibrium Quantity]
+        The equilibrium quantity (or market-clearing quantity), $Q_{E}$, is the quantity at which the market is
+        at equilibrium.
+        $$Q_{E} := Q|Q_{d}(p_{E})=Qs(p_{E})$$
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Equilibrium Price]
+        The equilibrium price (or market-clearing price), $p_{E}$, is the price at which the market is at
+        equilibrium.
+        $$p_{E} := p(Q_{E})$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Markets tend to move towards an equilibrium.
+
+    It’s important to recognize that we can only ever observe the market
+    equilibrium price. We never observe the demand or supply curves.
+
+    Assuming no market interventions, the market equilibrium price and quantity
+    is a function of the demand and supply functions themselves. Hence, it’s a
+    function of their choke prices and price elasticities.
+
+    \subsection{Disequilibrium}
+
+    Disequilibrium refers to a state when quantity demanded is not equal to
+    quantity supplied,  $$Q_{d}(p) \neq Qs(p)$$
+
+    There are two types of disequilibrium: shortages and surpluses.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Shortage]
+        A shortage is a state of the market where the quantity demanded is greater
+        than the quantity supplied, $Q_{d}(p)>Qs(p)$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Shortages occur when the price is below the equilibrium price, $p<p_{E}$.
+    
+    The narrative is that shortages don’t last long because consumers will 
+    “bid up” the price.
+
+    As the price goes up, the quantity demanded decreases and the quantity
+    supplied increases, until $Q_{d}(p)=Qs(p)$, quelling the shortage.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Surplus]
+    A surplus is a state of the market where the quantity supplied is greater
+    than the quantity demanded, $Q_{d}(p)<Qs(p)$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Surpluses occur when the price is above the equilibrium price, $p>p_{E}$.
+
+    The narrative is that surpluses don’t last long because producers will
+    discount their price.
+
+    As the price goes down, the quantity demanded increases and the quantity
+    supplied decreases until $Q_{d}(p)=Qs(p)$, quelling the surplus.
+
+    \subsubsection{San Francisco’s Metered Parking Experiments}
+
+    San Francisco instituted a dynamic pricing system that raised parking prices
+    in overcrowded areas during peak times and lowered them during less busy
+    periods. This program has reduced the number of drivers searching for
+    parking by approximately 30\%.\footnote{See See Millard-Ball’s Is the Curb
+    80\% Full or 20\% Empty? (2014).}
+
+    \subsubsection{Signs and Symptoms of Disequilibrium}
+
+    Price movement is a sign of disequilibrium.
+
+    If a price is rising, that's traditionally a sign of a shortage in that
+    market.
+
+    Likewise, if a price is falling, that's traditionally a sign of a surplus in
+    that market.
+
+    As we mentioned, if prices are free to adjust, then eventually there will be
+    no shortages or surpluses. However, if prices are not able to adjust freely
+    (for reasons we’ll discuss later) or if it's expensive to adjust prices,
+    then other symptoms can arise.
+
+    Symptoms of Disequilibrium include queuing, inventories and backorders,
+    bundling of extras and secondary markets.
+
+    \subsubsection{Predicting Market Changes}
+
+    The supply and demand framework helps predict price and quantity
+    adjustments.
+
+    When distinguishing between quantity demanded and demand, we referred to
+    whether the change was due to price or another determinant of demand.
+    However, price changes don’t occur in isolation; a price change along the
+    demand curve actually reflects a shift in the supply curve, and vice versa.
+
+    So, any movement along the demand or supply curves requires a corresponding
+    shift in the other curve.
+
+    Economics is not engineering but it can help us formulate narratives about
+    what may have happened in the past or what will happen in the future.
+
+    \subsubsection{Interpreting Market Data}
+
+    We can also attempt to diagnose what is occurring in a given market by
+    analyzing prices and units sold.
+
+    If prices and quantities move in the same direction, then the demand curve
+    has certainly shifted; However, whether the supply curve has changed is
+    ambiguous.
+
+    If prices and quantities move in opposite directions, then the supply curve
+    has definitely shifted. However, whether the demand curve has changed is
+    ambiguous.
+
+    \subsection{Alternative Equilibria}
+
+    While neoclassical equilibrium assumes markets clear perfectly, various
+    extensions of equilibrium concepts address more complex market dynamics.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Quasi-equilibrium]
+        Quasi-equilibrium is a state of the market where supply and demand are
+        nearly balanced, but small frictions or external shocks prevent full
+        equilibrium. These adjustments happen gradually, and the market may hover
+        around the equilibrium point without fully settling.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Dynamic Equilibrium]
+        Dynamic Equilibrium is a state of the market where supply and demand
+        adjust over time in response to changing conditions, leading to a new
+        equilibrium point.
+    \end{definition}
+    \end{tcolorbox}
+
+    Some text here.\footnote{Cobweb models are one class of dynamic models that
+    examine situations where prices and quantities oscillate in certain markets
+    due to time lags between supply decisions and price observations. In these
+    models, producers must decide on output before knowing the market price.
+    When the model converges, each outcome brings prices and quantities closer
+    to the equilibrium point, while in the divergent case, they move
+    progressively further from equilibrium. The model relies on adaptive
+    expectations, where agents base their decisions on past prices, rather than
+    the rational expectations framework common in modern economics. For more
+    information see Frederick Waugh’s Cobweb Models (1964) or more recently
+    Dynamics of the Cobweb Model with Adaptive Expectations and Nonlinear Supply
+    and Demand (1994) by Cars Hommes.}
+
+    \newpage
+\section{Elasticity}
+
+    The law of demand claims that as the price of a good increases, the quantity
+    demanded of that good decreases, and vice-versa. However, it says nothing
+    about how much the quantity demanded will decrease given the price increase.
+
+    To answer such a question, we introduce a new concept.
+
+    \subsection{Price Elasticity of Demand}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Price Elasticity of Demand]
+        Price elasticity of demand or (Own Price Elasticity of Demand)
+        $\epsilon_{pd}$, is a measure of how responsive
+        buyers are to price changes.
+        $$\epsilon_{pd} = \frac{\%\Delta Q_{d}}{\%\Delta P}$$
+    \end{definition}
+    \end{tcolorbox}
+
+    More precisely, price elasticity of demand is defined as the percent change
+    in quantity demanded caused by a percent change in the price.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Relatively Elastic]
+        A good is said to be relatively elastic, at a given price, if a
+        1\% change in increase in the price leads to a greater than one 1\%
+        decrease in the quantity demanded for that good.
+    \end{definition}
+    \end{tcolorbox}
+
+    Namely, buyers are relatively responsive to the price change.
+
+    In the relatively elastic case, price elasticity of demand is greater than 1,
+    $|\epsilon_{pd}|>1$.
+
+    Relatively Inelastic
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Relatively Inelastic]
+    A good is said to be relatively inelastic, at a given price, if a
+    1\% change in increase in the price leads to a lesser than one 1\% decrease
+    in the quantity demanded for that good.
+    \end{definition}
+    \end{tcolorbox}
+
+    Namely, buyers are relatively unresponsive to the price change.
+
+    In the relatively inelastic case, price elasticity of demand is less than 1,
+    $|\epsilon_{pd}|<1$.
+
+    Elasticity, the current price, and the slope of the demand curve.
+
+    For linear (and in fact most) demand curves, elasticity is a function of
+    both the current price and its slope.
+
+    Mathematically, this relationship becomes clearer by generalizing the
+    percent change definition of elasticity into a point elasticity definition.
+
+\begin{align*}
+\epsilon_{pd}
+& \equiv \frac{\%\Delta Q_d}{\%\Delta P} \\
+& = \frac{\dfrac{Q_d(P_2)-Q_d(P_1)}{Q_d(P_1)}}{\dfrac{P_2-P_1}{P_1}} \\
+& = \frac{Q_d(P_2)-Q_d(P_1)}{P_2-P_1}\cdot \frac{P_1}{Q_d(P_1)} \\
+&= \frac{\Delta Q_d(P)}{\Delta P}\cdot \frac{P}{Q_d(P)}
+\end{align*}
+
+\begin{align*}
+ \epsilon_{pd}(P) & \equiv \lim_{\Delta P\to 0}\,\frac{\Delta Q_d(P)}{\Delta P}\cdot \frac{P}{Q_d(P)} \\
+ & = \frac{dQ_d}{dP}\cdot \frac{P}{Q_d(P)}
+ & = \frac{Q'(P)}{}
+\end{align*}
+
+    In the linear case, $$\epsilon_{pd}=\frac{q_{d}'(p) \cdot p}{q_{d}(p)}=\frac{mP}{mP+P_{0}}$$.
+
+    Hence, in the linear case, elasticity if a function of the current price,
+    the slope of the demand function and the choke price,
+    $\epsilon_{pd}(p, m, p_{0})$.
+
+    One misconception is that price elasticity of demand remains constant across
+    the demand curve. This is not true.
+
+    As we move along the demand curve the elasticity changes, even for a linear
+    demand curve.
+
+    For a linear demand curve, the price elasticity of demand for price changes
+    from \$0 or the choke price, $p_{0}$, will be relatively elastic. Whereas
+    price changes in “the middle” will be relatively inelastic.
+
+    So, the price elasticity of demand is dependent on the current price.
+
+    However, it’s also greatly influenced by the slope of the demand curve.
+
+    If the demand curve is very steep, then the elasticity will be much higher
+    across the entire demand curve. Namely, the entire demand curve will be much
+    more relatively elastic compared to a flatter demand curve.
+
+    That is, if $m$ is very big, then $|\epsilon_{pd}|$ will be much higher.
+
+    Likewise, if the demand curve is very flat, then the elasticity will be much
+    lower across the entire demand curve. Namely, the entire demand curve will
+    be much more relatively inelastic compared to a steeper demand curve.
+
+    That is, if $m$ is very small, then $|\epsilon_{pd}|$ will be much lower
+
+    \subsection{Perfectly Elastic}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Perfectly Elastic]
+        A good is said to be perfectly elastic if a marginal increase in the
+        price will drive away all buyers, causing quantity demanded to drop to
+        zero.
+    \end{definition}
+    \end{tcolorbox}
+
+    This is one extreme case, if the demand curve is completely vertical or the
+    inverse demand curve is completely horizontal, then the price elasticity of
+    demand will be infinitely large, $$\lim_{m \to \infty}|\epsilon_{pd}(p,m,p_{0})| = \infty$$
+    and we say the demand is perfectly elastic.
+
+    We mentioned that the implication of a perfectly competitive market is that
+    all firms are price takers. This is because under the assumptions of perfect
+    competition, all firms operate under perfect elasticity.
+
+    Mathematically, we can show that if the residual demand is
+    $Q_{dr}=Q_{D}-Q_{sO}(P)$, the total quantity is $Q=nq$, the residual quantity
+    is $Q_{O}=(n-1)q$, and individual firm’s own supply is
+    $Q_{sO}(p)=(n-1)Q_{s}(p)$, then the price elasticity of demand
+    $\epsilon_{i}=\frac{dQ_{dr}}{dp}\frac{p}{q}$ is simply equal to $ \lim_{n \to \infty} \epsilon_{i}= \lim_{n \to \infty}  n\epsilon-(n-1)\eta_{O}$. As the number of firms
+    grows the elasticity diverges to negative infinity $\epsilon_{i}= n\epsilon - (n-1)\eta_{O}= - \infty $ which is
+    the definition of a perfectly elastic demand curve.
+
+    \subsection{Perfectly Inelastic}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Perfectly Inelastic]
+        A good is said to be perfectly inelastic if a price increase or
+        decrease causes no change in the quantity demanded.
+    \end{definition}
+    \end{tcolorbox}
+
+    This is the other extreme case, if the demand curve is completely horizontal
+    or the inverse demand is completely vertical, then the price elasticity of
+    demand will be zero, $$\lim_{m \to 0}|\epsilon_{pd}(p,m,p_{0})|=0$$ and we say the demand is perfectly
+    inelastic.
+
+    \subsubsection{Price Elasticity and Revenue}
+
+    Recall that Profit is simply revenue minus costs, $$\pi(R,C) := R-C$$
+
+    However, revenue is just a function of the price of the goods and the
+    quantity sold, $$R(p,q)=p \cdot q$$
+
+    For a linear demand curve, $q_{d}(p)$, our total revenue curve, $R(p)$, is
+    simply a parabola that stretches from p=0 to the choke price, $p_{0}$.
+
+    Mathematically, we can show can this by replacing quantity demanded with the
+    demand function, $$R(p,q)=p \cdot q_{d}(p)=p \cdot (-mp+p_{0})=-mp^{2}+pp_{0}$$
+
+    Price elasticity can inform business strategy.If the demand for a good is
+    relatively elastic at the current price, then a firm will be better off
+    lowering their price to increase total revenue - if they’re able to operate
+    above their marginal costs. Alternatively, if the demand is relatively
+    inelastic at the current price, then a firm will be better off increasing their price to increase total
+    revenue.
+
+    \subsection{Determinants of price elasticity of demand}
+
+    There’s essentially only one determinant of price elasticity of demand;
+    substitutes or substitutability.
+
+    This determinant can be broken down further into sub-determinants.
+
+    \begin{enumerate}
+        \item Number of products
+        \item The category of the good (brand specific or broad category)
+        \item Necessities
+        \item Search horizons
+        \item Time horizons
+        \item Elasticity as a general measure
+    \end{enumerate}
+
+    \subsection{Other Elasticities}
+
+    More generally, elasticity determines how sensitive one variable is to
+    changes in another.
+
+    Mathematically, $$\epsilon= \frac{\% \Delta f(x)}{\% \Delta x}$$
+
+    Therefore its applications go beyond just Price Elasticity of Demand.
+
+    \subsubsection{Cross price elasticity of demand}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Cross Price Elasticity of Demand]
+    Cross Price Elasticity of Demand, $\epsilon_{yx}$, is a measure of
+    how responsive the quantity demanded of one good is to the price changes of
+    another. 
+    \end{definition}
+    \end{tcolorbox}
+
+    More precisely, cross price elasticity of demand is defined as the percent
+    change in quantity demanded of a good $y$ caused by a percent change in the
+    price of a good $x$. Namely, 
+    $$\epsilon_{yx} = \frac{\%\Delta Q_{y}}{\%\Delta P_x}$$
+
+    Substitutes and Complements
+
+    Two goods are said to be substitutes if their cross price elasticity of
+    demand is positive, $\epsilon_{yx}>0$
+
+    Two goods are said to be complements if their cross price elasticity of
+    demand is negative, $\epsilon_{yx}<0$
+
+    \subsubsection{Income Elasticity of Demand}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Income Elasticity of Demand]
+    Income Elasticity of Demand, $I$, is a measure of how responsive the demand
+    for a good is to changes in income.
+    \end{definition}
+    \end{tcolorbox}
+
+    More precisely, income elasticity of demand is defined as the percent change
+    in quantity demanded caused by a percent change in income. Namely,
+    $$\epsilon_{I} = \frac{\% \Delta Q}{\% \Delta I}$$
+
+    Normal goods and Inferior Goods
+
+   A good is said to be a normal good, at a given income, if its income
+    elasticity of demand is positive, $I>0$
+
+   A good is said to be an inferior good, at a given income, if its income
+    elasticity of demand is negative, $I<0$
+
+    \subsubsection{Price elasticity of Supply}
+
+    Price Elasticity of Supply, $\epsilon_{ps}$ , sometimes referred to as Own Price
+    Elasticity of Supply,  is a measure of how responsive sellers are to price
+    changes
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Price Elasticity of Supply]
+    Price elasticity of supply is defined as the
+    percent change in quantity supplied caused by a percent change in the price.
+    Namely, $\epsilon_{ps} = \frac{\%\Delta Q_{s}}{\%\Delta P}$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Determinants of price elasticity of Supply
+
+    There’s essentially only one determinant of price elasticity of supply:
+    flexibility in the production process.
+
+    \begin{enumerate}
+        \item Inventories
+        \item Factor availability, mobility, and input substitutability.
+        \item Capacity constraints.
+        \item Ease of Entry and exit.
+        \item Time horizons.
+    \end{enumerate}
+
+    All elasticities are point elasticities. Namely, an elasticity cannot be
+    specified without reference to current prices and incomes.
+
+    \section{Applications of Elasticity}
+    
+    All elasticities are point elasticities. Namely, an elasticity cannot be
+    specified without reference to current prices and incomes. 
+    
+    The Iso-elastic demand curve is a special type of demand curve where the
+    price elasticity of demand is the same at every point on the curve. The
+    percentage change in quantity demanded resulting from a 1\% change in price
+    is constant along the curve. Mathematically, $q_{d}(p)=k \cdot p^{r}$.
+    
+    Firms can attempt to estimate elasticity through various methods, including:
+
+    \begin{enumerate}
+        \item Randomized Control Trials
+        \item Conversion rates can slow down sample size collection, especially
+        for small changes.
+    \end{enumerate}
+    
+    Behavioral Pricing
+    \begin{enumerate}
+        \item Asymmetric dominance
+        \item Independence of Irrelevant Alternatives
+        \item Threshold Price Points
+        \item Consumer Boycotts: Behavioral elasticity is asymmetric — steeper
+        for losses than for gains. Elasticity is also shaped by perceptions of
+        fairness — people resist price changes they perceive as exploitative.
+    \end{enumerate}
+
+    \newpage
+
+\section{Government Intervention}
+
+    We'll focus on the economic aspects, setting aside philosophical debates
+    around these issues for now.
+
+    \subsection{Taxes}
+
+
+    Statutory burden
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Statutory Burden]
+    Statutory burden is the burden of being assigned by the government to send a
+    tax payment.
+    \end{definition}
+    \end{tcolorbox}
+
+    Namely, will the tax be imposed on the seller or the buyer.
+
+    \subsubsection{Types of Taxes}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Unit Tax]
+        A unit tax (or excise tax) is a tax imposed on each unit of a good sold.
+        Mathematically, $p_{d}=p_{s}+t$.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Value Tax]
+        A value tax (or ad-valorem tax) is a tax imposed on the value (or price)
+        of a good.
+        Mathematically, $p_{d}=p_{s}(1+t)$.
+    \end{definition}
+    \end{tcolorbox}
+
+    \subsubsection{Taxes on Sellers}
+
+    Under perfect competition, unit taxes on producers decrease the supply of
+    the taxed good.
+
+    This is because the tax increases the firm’s variable costs (and therefore
+    its marginal costs) at each level of production, decreasing the quantity
+    supplied at every given market price.
+
+    Assuming the market demand is not affected by the tax, then the decrease in
+    supply can cause consumers to bid-up the price.
+
+    \subsubsection{Taxes on Buyers}
+
+    Unit taxes on consumers decrease the demand of the taxed good.
+
+    This is because they effectively increase the price at each level of
+    consumption, decreasing the quantity supplied at every given market price.
+
+    Assuming the market supply is not affected by the tax, then the decrease in
+    demand can cause producers to roll back production.
+
+    \subsection{Tax incidence}
+
+    Through this lens, who is assigned to pay the tax is irrelevant. The
+    economic outcome, in aggregate, is the same.
+
+    However, taxes can have disproportionate outcomes on consumers versus
+    producers. The degree of this proportionality depends on the price
+    elasticities of both demand and supply.
+
+    If the demand is relatively elastic, and the supply is relatively inelastic,
+    then the producer will bear the larger share of the tax incidence.
+
+    If the demand is relatively inelastic, and the supply is relatively elastic,
+    then the consumer will bear the larger share of the tax incidence.
+
+    Mathematically, we can show this is the case by leveraging our knowledge of
+    derivatives and the fact that the unit tax is a horizontal translation of
+    either the demand or supply functions.
+    \footnote{For a formal proof, see Hilary Hoynes’s 
+    \href{https://gspp.berkeley.edu/assets/uploads/courses/notes/Lec1-Tax-Incidence.pdf}{Lecture of Tax Incidence at UC Berkeley}.}
+
+    While insightful, outcomes can diverge from the competitive model if taxes
+    are complex or non-transparent.  Tax salience refers to how noticeable or
+    transparent a tax is to consumers and businesses. 
+    
+    For example, increases in taxes included in posted prices have been found to
+    reduce alcohol consumption more than increases in taxes applied at the
+    register.
+    \footnote{See See Raj Chetty’s Salience and Taxation: Theory and Evidence (2009).}
+
+    \subsection{Subsidies}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Subsidy]
+        A subsidy is a payment made by the government for the purchase of a good.
+        Mathematically, $p_{d}=p_{s}-t$.
+    \end{definition}
+    \end{tcolorbox}
+
+    Subsidies granted to consumers increase the demand of the good.
+
+    This is because the subsidy in effect lowers the price of the good at each
+    level of consumption, increasing the quantity demanded at every given market
+    price.
+
+    Similar to taxes, whether the consumer or producer receives the subsidy is
+    irrelevant. The aggregate economic outcome is the same.
+
+    Also, like taxes, the degree of disproportionate outcomes on consumers
+    versus producers depends on the price elasticities of both demand and supply.
+
+    Examples:
+
+    Pell Grant
+
+    \subsection{Price Controls}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Price Controls]
+        A Price control, $P_C$, are restrictions set in place and enforced by governments
+        or groups, on the prices that can be charged for goods and services in a
+        market.
+    \end{definition}
+    \end{tcolorbox}
+
+    Price controls are restrictions set in place and enforced by governments or
+    groups, on the prices that can be charged for goods and services in a market.
+
+    There are two classes of price controls.
+
+    A price ceiling, $p_{C}$, is a government- or group- imposed maximum price
+    that sellers can charge.
+
+    A price floor, $p_{F}$, is a government- or group- imposed minimum price
+    that sellers can charge.
+
+    \subsubsection{Price Ceilings}
+
+    There are several types of price ceilings.
+
+    A uniform fixed price ceiling sets a maximum price for a particular good or
+    service, regardless of market conditions or changes in costs.
+
+    A price change ceiling limits the rate at which prices can increase or
+    decrease over a given period.
+
+    A profit ceiling limits the maximum profit a firm can earn from selling a
+    particular good or service.
+
+    Uniform fixed price ceilings cause shortages, 
+    $$P_{C}<P_{E} \implies Q_{s}(P=P_{C}) < Q_{D}(P=P_{C})$$
+
+    There’s considerable empirical evidence to support this theory.
+    \footnote{See Milton Friedman’s and George Sigler’s Roofs or Ceiling?
+    Current Housing Problem (1942), Ed Glazer’s The Misallocation of Housing
+    Under Rent Control (1972) and more recently Rebecca Diamond’s The Effects of
+    Rent Control Expansion on Tenants, Landlords, and Inequality: Evidence from
+    San Francisco (2019) and David Autor’s Housing Market Spillovers: Evidence
+    from the End of Rent Control in Cambridge Massachusetts (2012).}
+
+    Examples:
+
+    Rent control
+
+    History of Rent Control
+
+    Became popular in the U.S. following World War II. New York City’s rent
+    control program, which began in 1943, is among the oldest in the country.
+
+    Many other cities in the United States adopted some form of rent control in
+    the 1970s.
+
+    Currently, about 10\% of rental units in the United States are now subject
+    to price controls.
+
+    Empirical evidence
+
+    Rent controlled tenants are more likely to remain in the rent controlled
+    apartment and lowers displacement from San Francisco, especially racial
+    minorities.
+
+    Evidence from San Francisco, suggests rent control decreases renter’s
+    mobility decreases by 20\%.
+
+    Landlords susceptible to rent control reduce housing supplies by converting
+    to condos, selling to owner-occupants or re-developing buildings.
+
+    Evidence from San Francisco suggests rent control reduces housing supply by
+    15\%.
+
+    The removal of rent control can lead to an increase in the number of unit
+    renovations. However, it can also cause spillovers, increasing the price or
+    value of nearby or neighboring apartments units, leading to less affordable
+    housing.
+
+    U.S. Economic Stabilization Act of 1970
+
+    90-day freeze on wages and prices in order to counter inflation.
+
+    Iraq’s 2003 Price ceiling on Gasoline
+
+    Venezuela’s 2020 Price ceiling on Groceries
+
+    Public opinion
+
+    Survey evidence suggests voters are often supportive of price ceilings.
+
+    \subsubsection{Price Floors}
+
+    Uniform fixed price floors cause surpluses
+    $$P_{F}>P_{E} \implies Q_{s}(P=P_{F}) > Q_{D}(P=P_{F})$$
+
+    Again, there’s considerable empirical evidence to support this.
+
+    Examples:
+
+    Agricultural products
+
+    History of Government Purchases of Agricultural Products
+
+    Became popular during the great depression when a drop in demand caused the
+    price of agricultural products to drop.
+
+    Prices received by farmers plunged nearly 66\% from 1930 to 1933. By 1932,
+    more than 50\% of all farm loans were in default.
+
+    Government purchases of any surplus, by requirements to restrict acreage in
+    order to limit those surpluses, by crop or production restrictions, and the
+    like.
+
+    The government can store the surpluses or find special uses for them. For
+    example, surpluses generated in the United States have been shipped to
+    developing countries as grants-in-aid or distributed to local school lunch
+    programs.
+
+    After 1973, the government stopped buying the surpluses (with some
+    exceptions) and simply guaranteed farmers a “target price.”
+
+    \subsection{Quantity Controls}
+
+    Quantity controls (or regulations) are restrictions set in place and
+    enforced by governments or groups, on the quantities that can be sold of
+    goods and services in a market.
+
+    There are two classes of quantity controls:
+
+    A mandate is a government- or group- imposed minimum quantity that must be
+    bought or sold.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Quota]
+    A quota is a government- or group- imposed maximum quantity that must be
+    sold.
+    \end{definition}
+    \end{tcolorbox}
+
+    \subsubsection{Mandates}
+
+    \subsubsection{Quotas}
+
+    Quotas can raise prices.
+
+    Quotas are quite common.
+
+    Examples:
+
+    Zoning
+
+    Zoning is a law that divides a jurisdiction's land into districts, or zones,
+    and limits how land in each district can be used.
+
+    History of Zoning
+
+    Zoning laws emerged in cities in the early 1910s. Early zoning regulations
+    were in some cases motivated by racism and classism, particularly with
+    regard to those mandating single-family housing.
+
+    \newpage
+
+\section{Welfare and Market Failures}
+
+    Welfare
+
+    To this point, we have been concerned with questions of price and quantity
+    determination under different market conditions.
+
+    We now shift our focus from ‘prediction’ to ‘assessment’ and ask a different
+    sort of question,
+
+    Can we judge some to be ‘better’ or ‘worse’ than others in well-defined and
+    meaningful ways?
+
+    When the government intervenes in a market outcome, different agents will
+    often be affected very differently. Typically, some will ‘win’ while others
+    will ‘lose’.
+
+    How will the proposed policy affect the wellbeing (or welfare) of the
+    individual? How should we weigh the different effects on different
+    individuals together and arrive at a judgment of ‘society’s’ interest or
+    welfare?
+
+    \subsection{Normative v Positive Economics}
+
+    In philosophy and ethics, a descriptive or positive statement is an
+    assertion about facts of the world, while prescriptive or normative
+    statements express value judgments.
+
+    Economics is often divided into positive and normative economics.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Positive Economics]
+    \textbf{Positive economics} focuses on the description, quantification and
+    explanation of economic phenomena.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Normative Economics]
+    \textbf{Normative economics} focuses on value judgments, opinions, and
+    discussions about fairness and what the outcome of the economy or goals of
+    public policy ought to be.
+    \end{definition}
+    \end{tcolorbox}
+
+    \subsubsection{History of the positive-normative paradigm}
+
+    The history of the positive-normative paradigm can be attributed to the
+    works of David Hume and John-Stuart Mill in the early 18th and 19th
+    centuries, and Lionel Robbins in the 20th century.
+    \footnote{See An Essay on the Nature and Significance of Economic Science (1932)}
+
+    \subsection{(Economic) Efficiency}
+
+    We’ll now introduce positive measures in combination with a normative
+    benchmark to assess markets from a social perspective.
+
+    \subsubsection{Allocative Efficiency}
+
+    Economic Surplus
+
+    Recall that economic surplus refers to the monetary gain a consumer or
+    producer receives because the price they pay (or accept) for a good or
+    service is less than the price they are willing to pay (or accept).
+
+    $$ES:=|p_{R}-p_{E}|$$
+
+    Individual Consumer and Producer Surplus
+
+    Distinguishing between consumers and producers can help us better assess
+    potential ‘winners’ and ‘losers’ of different economic outcomes.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Consumer Surplus]
+    Consumer Surplus $CS:=p_{R}-p_{m}$ 
+    \end{definition}
+    \end{tcolorbox}
+
+    An individual buyer’s consumer surplus, is the difference between the
+    maximum price a consumer would be willing to pay, their reservation price,
+    and the market price.
+
+    or more rigorously $CS_{i}(p_{R}, p_{m})= p_{R}-p_{m}$.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Producer Surplus]
+    Producer Surplus $PS:=p_{m}-p_{R}$
+    \end{definition}
+    \end{tcolorbox}
+
+    An individual seller’s producer surplus, is the difference between the
+    market price and the minimum price a producer would be willing to accept.
+
+     or more rigorously $PS_{i}(p_{R}, p_{m}):=p_{m}-p_{R}$.
+
+    An outcome is said to be more (allocatively) efficient than another if it
+    yields a larger economic surplus.
+
+    The allocatively efficient outcome, among a set of outcomes, is the outcome
+    that yields the largest economic surplus.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Allocatively Efficient Outcome]
+    Allocatively Efficient Outcome
+    $$q^{*}= \text{argmax}_{q}ES(q)$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Market Consumer and Producer Surplus
+
+    The market consumer surplus, is the sum of consumer surpluses in the market.
+
+    $$CS(p):=\sum_{i}^{N} CS_{i}=CS_{1}+CS_{2}+...$$
+
+    Graphically, the market consumer surplus can be represented on the
+    conventional supply and demand diagram as the area between the demand curve
+    and the market price, up to the quantity purchased.
+
+    If the demand curve is linear, then the consumer surplus can be calculated
+    with geometry.
+
+    Otherwise, we can use integral calculus,
+   $$CS(p)=\int_{q_{d}(p_{m})}^{q_{d}(p_{d0})}[q_{d}(p)-q_{d}(p_{m})] dp$$
+
+    Likewise, the market producer surplus, is the sum of producer surpluses in
+    the market.
+
+    $$PS(p):=\sum_{i}^{N}=PS_{1}+PS_{2}+...$$
+
+    Graphically, the market producer surplus can be represented on the
+    conventional supply and demand diagram as the area between the market price
+    and the supply curve and, up to the quantity purchased.
+
+    If the supply curve is linear, then the producer surplus can be calculated
+    with geometry.
+
+   Otherwise, we can use integral calculus, 
+    $$PS(p)=\int_{q_{s}(p_{s0})}^{q_{s}(p_{m})}[q_{s}(p_{m})-q_{s}(p)] dp$$
+
+    The (total) economic surplus of the market is simply the sum of producer and
+    consumer surplus.
+
+    $$ES(p)=CS(p)+PS(p)$$
+
+    Hence, for a market outcome to be allocatively efficient, among a set
+    consumers, producers, and possible outcomes, it must yield the largest
+    (total) economic surplus, where economic surplus is the sum of consumer
+    surplus and producer surplus.
+
+    Graphically, for an allocatively efficient outcome, the area between the
+    demand and supply curves, up to the quantities purchased, will be as wide as
+    possible.
+
+    Maximizing economic surplus requires that each good goes to the person who
+    gets the highest marginal benefit from it, as measured by their reservation
+    price.
+
+    Allocative efficiency is a positive measure. It's a factual assessment of
+    how well a market allocates resources. However, its maximization serves as
+    our normative benchmark.
+
+    Allocative efficiency still serves as the benchmark for social welfare in
+    mainstream economic thought.
+
+    It’s not obvious that it should.
+
+    What about equity?
+
+    \subsubsection{Productive Efficiency}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Productive Efficiency]
+    Productive Efficiency
+    \end{definition}
+    \end{tcolorbox}
+
+    A process or outcome is productively efficient if operating within the
+    constraints of current technology it cannot increase production of one good
+    without sacrificing production of another good.
+
+    For a firm, this implies producing each good at the lowest marginal cost.
+
+    We’ll explore this idea further later in the course.
+
+    Perfectly competitive markets generate the highest economic surplus,
+    efficient allocation and efficient production.
+    \footnote{Allocative efficiency is both Pareto and Kaldor-Hicks efficient
+    under perfect competition.}
+    \footnote{Arrow-Debreu model. See , John Geanakoplos’s Kenneth Arrow’s
+    Contributions to General Equilibrium for more information.}
+
+    This result is known as the First Fundamental Theorem of Welfare Economics,
+    and applies to general equilibrium (in addition to partial equilibrium).
+    \footnote{See Kegon Teng Kok Tan’s mathematically rigorous but
+    succinct notes, \href{https://www.math.uchicago.edu/~may/VIGRE/VIGRE2008/REUPapers/Tan.pdf}{The First Fundamental Theorem of Welfare Economics}, for a
+    formal proof.}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The First Fundamental Theorem of Welfare Economics]
+    The First Fundamental Theorem of Welfare Economic
+    \end{definition}
+    \end{tcolorbox}
+
+    The theorem is sometimes seen as an analytical confirmation of Adam Smith's
+    "invisible hand" principle, namely that competitive markets ensure an
+    efficient allocation of resources.
+
+    \subsection{Market failures}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Failure]
+    A market failure is a situation in which the allocation of goods and
+    services by a free market is not allocatively efficient.   
+    \end{definition}
+    \end{tcolorbox}
+
+    Such an allocation is referred to as an inefficient outcome.
+
+    Sources of market failures include market power, externalities, incomplete
+    information, and irrationality.
+
+    Market power
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Power]
+    Market power is the ability of a firm to influence the price at
+    which it sells a product or service by manipulating either the supply or
+    demand of the product.
+    \end{definition}
+    \end{tcolorbox}
+
+
+    Market power tends to lead to underproduction.
+
+    Externalities
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Externality]
+    An externality or external cost is an indirect cost or benefit to
+    an uninvolved third party that arises as an effect of another party's
+    (or parties') activity.
+    \end{definition}
+    \end{tcolorbox}
+
+
+
+    Incomplete Information
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Information Asymmetry]
+    Information asymmetry is a situation where one party has more or better
+    information than the other.
+    \end{definition}
+    \end{tcolorbox}
+
+    Asymmetric information can undermine trust, leading to under consumption or
+    underproduction.
+
+    Bounded rationality
+
+    Government regulation
+
+    In the absence of externalities, price controls, quantity controls, taxes,
+    and subsidies can lead to inefficient outcomes.
+
+    Deadweight loss
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Deadweight Loss]
+    Deadweight loss is a measure of how much economic surplus falls below the
+    economic surplus at the allocatively efficient outcome.
+    \end{definition}
+    \end{tcolorbox}
+
+    $$DWL_{ES}=|ES_{E}-ES|$$
+
+    Both under and over production can lead to deadweight loss.
+
+    If both the demand and supply curves are linear, then any deadweight loss
+    can be calculated with geometry.
+
+    \subsection{Critiques of Efficiency}
+
+    Allocative efficiency as a normative benchmark embeds some very strong value
+    judgments that have led many people to criticize the focus given to economic
+    efficiency.
+
+    These criticisms include ignorance of the effects and ethics of
+    distributional outcomes, neglect of serious consideration about the ability
+    to pay, and reliance on consequentialism as a philosophy.
+
+    \subsubsection{Distributional outcomes}
+
+    Equity refers to the principle of fairness in the distribution of economic
+    benefits and resources among individuals and groups in society.
+
+    A focus on allocative efficiency implies trying to obtain the largest
+    possible economic surplus, irrespective of who it goes to.
+
+    Government policies that aim to promote equity often induce inefficiencies
+    and contribute dead-weight loss.
+
+    This thought can best be characterized by Okun’s “leaky bucket”.\footnote{See Arthur Okun’s Equality and Efficiency: The Big Tradeoff (1975)}
+
+    \subsubsection{Willingness (and able) to pay}
+
+    The reservation price is assumed to reflect the marginal benefit a consumer
+    receives from a good. However, how much an individual is willing to pay for
+    pie partly reflects how much utility they receive from pie, and partly it
+    reflects their ability to pay.
+
+    \subsubsection{Consequentialism versus Deontology}
+
+    Consequentialism argues that the morality of an action is determined by its
+    outcomes.
+
+    In economics, this is analogous to focusing on efficiency, where the primary
+    concern is the result, not how it was achieved.
+
+    Utilitarianism argues an action is morally right if it maximizes overall
+    happiness or utility and minimizes suffering for the greatest number of
+    people.
+
+    Deontological ethics emphasize that the morality of an action is based on
+    adherence to rules or principles, regardless of the outcome.
+
+    In economic policy, this might translate to valuing fair processes (such as
+    equal opportunity or democratic decision-making) over purely efficient
+    outcomes.
+
+    \newpage
+    \section{Externalities}
+
+    An externality (or external cost) is an indirect cost or benefit to an
+    uninvolved third party that arises as an effect of another party's (or
+    parties') activity.
+
+    More rigorously, an externality arises whenever the utility or production
+    possibility of an agent is a function of another agent’s consumption or
+    production.
+
+    \subsection{Types of Externalities}
+
+    \subsubsection{Negative versus Positive Externalities}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Negative Externality]
+    A negative externality is a cost incurred by a third party due to the
+    actions of others, where the party causing the externality does not bear the
+    full cost of their actions.
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Air and water pollution
+
+    Deforestation
+
+    Noise pollution
+
+    Namely, one neighbor's noise can affect the health and well-being of other
+    neighbors.
+
+    Congestion, including traffic congestion
+
+    Property “Contagion” Effects
+
+    Namely, one neighbor's negligence for their property can decrease the
+    property value of neighbors.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Positive Externality]
+    A positive externality is a benefit received by a third party due to the
+    actions of others, where the party generating the benefit does not receive
+    full compensation.
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+    \begin{enumerate}
+        \item Renewable energy, including solar and wind
+        \item Education
+        \item Public transportation
+        \item Vaccinations
+    \end{enumerate}
+
+    \subsubsection{Consumption versus Production Externalities}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Consumption Externality]
+    A consumption externality is an externality arising from the consumption of
+    goods or services that affects third parties who are not involved in the
+    consumption decision.
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+    \begin{enumerate}
+        \item Smoking
+        \item Antibiotic misuse
+    \end{enumerate}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Production Externality]
+    A consumption externality is an externality arising from the consumption of
+    goods or services that affects third parties who are not involved in the
+    consumption decision.
+    \end{definition}
+    \end{tcolorbox}
+
+    Examples:
+
+    Free software
+
+    Table 1: Types of Externalities
+
+    Negative Consumption Externality
+
+    Positive Consumption Externality
+
+    Negative Production Externality
+
+    Negative Production Externality
+
+    \subsection{Externalities, Private Interest, and Societal Well-being}
+
+    Consequences of Externalities
+
+    Externalities can lead to market failures.
+
+    Negative externalities lead to overproduction of the goods produced or
+    consumed.
+
+    Positive externalities lead to underproduction of the goods produced or
+    consumed.
+
+    From a society’s perspective, the relevant marginal cost of a good is the
+    sum of the marginal private costs incurred by the producer and their
+    marginal external cost borne by bystanders.
+
+    Mathematically, $$msc=mpc+mec$$
+
+    Likewise, from a society’s perspective, the relevant marginal benefit of a
+    good is the sum of the marginal private benefits gained by the consumer and
+    their marginal external benefit enjoyed by bystanders.
+
+    Mathematically, $$msb=mpb+meb$$
+
+    Solutions to Externalities
+
+    The solution requires an organization to coordinate individuals.
+
+    Namely, the government.
+
+    These solutions come in two types of flavors, price methods and quantity
+    methods.
+
+    Academic economists have classified solutions into 6 categories: 
+    \begin{enumerate}
+        \item Private bargaining
+        \item Corrective taxes and subsidies
+        \item Cap and trade
+        \item Laws, rules and regulations
+        \item Government provision of public goods
+        \item Assignment of ownership rights
+    \end{enumerate}
+
+    Private Bargaining
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Private Bargaining]
+    In the context of economics, Private bargaining, also known as Coasean bargaining, is a voluntary
+    negotiation process between parties to reach a mutually beneficial agreement
+    to address the negative or positive impact of an activity.
+    \end{definition}
+    \end{tcolorbox}
+
+    Side payments
+
+    Coase Theorem
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Coase Theorem]
+    Coase Theorem states that when property rights are clearly defined and
+    transaction costs are negligible, parties will negotiate to correct the
+    externality, leading to an efficient allocation.
+    \end{definition}
+    \end{tcolorbox}
+
+    Strategic investments
+
+    In the context of externalities, a strategic investment is an investment to
+    internalize an externality and capture additional benefits, such as
+    increased market share or revenue.
+
+    Examples:
+
+    Google’s high-speed internet access and advertising
+
+    Mergers
+
+    Corrective (or Pigovuvian) taxes and subsidies
+
+    Correct Taxes and Subsidies
+
+    Corrective taxes force the producer or consumer to internalize the cost,
+    correcting the overproduction or overconsumption.
+
+    Likewise, corrective subsidies allow the producer or consumer to internalize
+    the benefit, correcting the underproduction or underconsumption.
+
+    The legal system and corrective taxes
+
+    In the context of externalities, fines via the legal system can also act as
+    corrective taxes though there are some important differences.
+
+    Social recognition and semiotic power
+
+    Can act as a sort of social tax or subsidy.
+
+    Examples:
+
+    The “I Voted” sticker.
+
+    Empirical evidence to support that it works.\footnote{See Zoe Corbyn’s
+    Facebook experiment boosts US voter turnout (2012)}
+
+    Permits and Cap and Trade
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Cap and Trade]
+    Cap and Trade is a market-based policy tool designed to control
+    externalities by setting a limit (or cap) on the total allowable level of
+    emissions while allowing for the trading of emission permits.
+    \end{definition}
+    \end{tcolorbox}
+
+    Laws, rules, and regulations
+
+    Government provision of public goods
+
+    Before introducing the final two remediations to externalities (5.)
+    government provisions of public goods and (6.) assignment of ownership
+    rights, we'll briefly explore different types of goods and the unique
+    externalities associated with public goods and common goods.
+
+    \subsection{Public Goods}
+
+    Rivalry and Excludability
+
+    Rivalry
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Rivalrous Good]
+    A good is said to be rivalrous if its consumption by one individual
+    reduces the quantity or utility of the good available for consumption by
+    another individual.
+    \end{definition}
+    \end{tcolorbox}
+
+    Excludability
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Excludable Good]
+    A good is said to be excludable if there exists a mechanism or institution
+    that allows certain individuals to be prevented from accessing or consuming
+    the good.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Public Good]
+    A public good is a good that is non-rivalrous and non-excludable in
+    consumption.
+    \end{definition}
+    \end{tcolorbox}
+
+    It is one type of good in a class of goods characterized by rivalry and
+    excludability, or lack thereof.
+
+    Classes of Goods
+
+    Private goods
+
+    Rivalrous, excludable
+
+    Examples
+
+    Food, clothing, vehicles, houses, etc.
+
+    Public goods
+
+    Nonrivalrous, nonexcludable
+
+    Examples
+
+    Public lighting, including light-houses, street lighting and sunshine
+
+    Club goods
+
+    Nonrivalrous, excludable
+
+    Examples
+
+    Streaming services, including Netflix, Spotify, etc.
+
+    Common goods
+
+    Rivalrous, nonexcludable
+
+    Examples
+
+    Natural resources, including fish stock, timber, groundwater, etc.
+
+    Table 2: Types of Goods
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            & Excludable & Nonexcludable \\
+            \hline
+            Rivalrous & Private Good & Common Good \\
+            \hline
+            Nonrivalrous & Club Good & Public Good \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Since public goods are non-excludable and non-rivalrous they’re inherently
+    unprofitable since individuals can consume them without contributing to
+    their cost. Namely, they can “free-ride” off of other consumers.
+
+    Free Riding
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The Free Rider Problem]
+    The Free Rider Problem refers to the situation where individuals have an
+    incentive to consume a good or benefit from a service without contributing
+    to its cost, due to the non-excludability of the good.
+    \end{definition}
+    \end{tcolorbox}
+
+    Free-riding leads to their underproduction of public goods since there’s no
+    profit incentive for a firm to produce them.
+
+    Solutions to Free-Riding
+
+    To reconcile this externality the government can collect tax revenue to fund
+    the production and distribution of these goods.
+
+    Assignment of ownership rights
+
+    A common good is a good that is non-excludable rivalrous in consumption.
+
+    Since common goods are non-excludable but rivalrous, if agents are rational
+    and self-interested, they will overconsume the resource, leading to a
+    potential tragedy of the commons.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The Tragedy of the Commons]
+    The Tragedy of the Commons refers to the situation where a rivalrous,
+    non-excludable resource is overused and depleted because individual agents,
+    acting in their own self-interest, fail to account for the negative
+    externality their consumption imposes on others.
+    \end{definition}
+    \end{tcolorbox}
+
+    Example:
+
+    Overfishing and the 1950 Collapse of Monterey Bay’s Sardine Industry
+
+    The Tragedy of the commons leads to the overconsumption of the good rather
+    than what is allocatively efficient.
+
+    Solutions to the Tragedy of the Commons
+    
+
+    To reconcile this externality one solution is the assignment of ownership
+    rights.
+
+    If you own the resource from which the good is consumed, then you’ll have an
+    incentive to conserve it for the future.
+
+    Social cost versus optimal quantity
+
+    Bounded Rationality and Internalities
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[internality]
+    An internality is the long-term benefit or cost to an individual that they
+    do not consider when making the decision to consume a good or service.
+    \end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Hyperbolic Discounting]
+    Hyperbolic discounting, also called “present bias,” is a cognitive bias,
+    where people choose smaller, immediate rewards rather than larger, later
+    rewards.
+    \end{definition}
+    \end{tcolorbox}
+
+    \newpage
+
+\section{The Labor Market}
+
+    When we talked about Producer Choice and Supply we talked about input (or
+    “factor”) prices, the price of labor and the price of capital. However, we
+    never discussed where the price of the inputs came from.
+
+    We’ll now discuss the labor market, one of at least two factor markets, or
+    a market where factors of production are bought and sold.
+
+    \subsection{Labor Market Models}
+
+    Long history of economic thought on labor and long history of labor market
+    models\footnote{See Adam Smith and David Ricardo’s comments on the Labor Theory of Value and Karl Marx’s theory of
+    Surplus Value in Das Kapital (1867)}
+
+    Competitive equilibrium models, Human Capital Models, Search and Matching
+    Models are amongst the most popular in the standard curriculum. However, at
+    the undergraduate level, competitive equilibrium models are most popular.
+
+    We’ll now introduce the competitive equilibrium model
+
+    \subsubsection{The (Perfectly) Competitive Equilibrium Model of the Labor Market}
+
+    In the model, we define
+
+    Wage is the price of labor, $$w=p_{L}$$
+
+    Firms or businesses are the employers and thus consume or demand labor.
+
+    This demand for labor is characterized by some labor demand function, which
+    is a function of the wage, $q_{d}(w)$.
+
+    Households or individuals are the workers and thus produce or supply labor.
+
+    This supply of labor is characterized by some labor supply function, which
+    is also a function of the wage, $q_{s}(w)$.
+
+    We make a familiar but \textbf{big assumption}, both the labor market and the goods
+    market that the labor operates in is perfectly competitive. This is arguably
+    the biggest assumption of the entire course. Why? Essentially, we’re
+    considering a commodity market where the labor itself can
+    also be viewed as a commodity.
+
+    Example:
+
+    Pomegranate pickers
+
+    Let’s think about what that means in the labor market.
+    \begin{enumerate}
+    \item Infinite number of firms and workers each with an infinitesimal share of the
+    market.
+    \item Homogenous labor: All workers are equally productive, meaning there are no differences between
+    workers. Employers see no distinction between workers.
+    \item No barriers to entry or exit: Workers can easily enter or exit the market without facing significant
+    obstacles or costs.
+    \item Perfect Information: All workers and employers have complete and accurate information about
+    prices, wages, job conditions and market conditions. There are no
+    “informational asymmetries”.
+    \item Perfect factor mobility: Factors of production (labor, capital, etc.) can move freely between
+    different uses or locations without any friction.
+    \item No externalities: No external costs of benefits passed on to third parties
+    \item No transaction costs: For example, no switching costs.
+
+    \end{enumerate}
+
+    The conclusion is that:
+
+    Workers and employers are price takers. If a worker tried bargaining for
+    anything more than the equilibrium wage then the demand for their labor
+    would fall to 0.
+
+    \subsection{Labor Demand}
+
+    Just as before, a labor demand curve, is a function mapping quantities
+    demanded of labor by a firm, $q_{d}(w)$, at every single wage, $w$.
+
+    Recall that the law of demand, is an economic principle that states,
+    holding all other things constant, there is an inverse relationship between
+    the price of a good and the quantity demanded of that good. The underlying
+    assumption that governed the law of demand was the assumption of diminishing
+    marginal benefit or diminishing marginal returns or diminishing marginal
+    utility.
+
+    However, in the labor market, the underlying assumption that governs the law
+    of labor demand is diminishing marginal product or diminishing marginal
+    revenue product.
+
+    The Marginal Revenue Product of labor is the additional revenue associated
+    with another unit of labor, $$mrp_{L}=mp_{L} \cdot p_{L}$$
+
+    Recall that under the assumption of capacity constraints and fixed inputs,
+    variable units, like labor, experience diminishing marginal product.
+
+    Thus, since the price is fixed, due to our assumption about perfect
+    competition in the goods market, as marginal product decreases so does
+    marginal revenue product.
+
+    The mathematical implication of this is that our models of individual demand
+    curves for labor are downward sloping.
+
+    From the employer’s perspective the marginal cost of labor is simply the
+    wage, $mc=wL$.
+
+    As before, consumers will keep consuming units of a good or service until
+    they reach the quantity $q$ where their marginal benefit is equal to their
+    marginal cost, $mb=mc$.
+
+    In this case the firms (or employers) are the consumers and the quantity of
+    the good they consider, is the quantity for labor, $q_{L}$.
+
+    Thus, the firm will continue to demand labor up until the marginal benefit
+    of labor is equal to the marginal cost of labor.
+
+    That is, the firm will continue to demand labor until the wage is equal to
+    the marginal revenue product, $mrp_{L}=w_{L}$.
+
+    At that point, the firm is balancing costs and revenue in a way that is
+    profit maximizing.
+
+    $$mrp_{L}=w_{L}  \cdot q_{L}$$.
+
+    Again, we’re just specifying whether we’re talking about some arbitrary
+    concept of benefit or cost, or instead quantifying those costs and benefits
+    via the pricing system.
+
+    If the assumption of diminishing marginal revenue product of labor is not
+    true, then the law of demand will not hold.
+
+    \subsubsection{Additional Determinants of Labor demand}
+
+    In the example provided above a firm’s demand is a function of wage and
+    nothing else, $q_{d}(w)$.
+
+    Namely, if you give me the wage being charged, then I’ll tell you how much
+    labor an employer or firm will demand $q_{d}$ at that wage $w$.
+
+    However, certainly the wage is not the only thing employers consider when
+    determining how much labor to hire.
+
+    What other things, besides the wage, might influence a firm’s decision to
+    hire?
+
+    Academic economists have tried to classify most things into 5 other
+    categories.
+
+    \begin{enumerate}
+        \item The price of the goods produced, $p$
+        \item The price of capital, $w_{K}$
+        \item Labor productivity, $A$
+        \item Non-wage benefits, taxes, and subsidies, $t$
+    \end{enumerate}
+
+    The Price of the output or good produced, p is perhaps the most obvious
+    factor.
+
+    The demand for labor depends on the price or quantity demanded of the goods
+    that labor produces.
+
+    Namely, as the price of the goods the labor produces goes up the demand for
+    the labor will go up and vice-versa.
+
+    For example, if the demand or price for pomegranates goes up, surely the
+    demand for pomegranate field laborers will also go up.
+
+    In the economics literature, this phenomenon is referred to as derived
+    demand.
+
+    Derived demand is demand for a factor of production, like labor, or
+    intermediate good that occurs as a result of the demand for another
+    intermediate or final good.
+
+    Mathematically, for some factor of production or intermediate good, $x$, and
+    some intermediate or final good, $y$, 
+    $$q_{dx}(.)=q_{dx}(p_{x},q_{dy}(p_{y}))$$
+
+    The Price of capital (or machinery), $w_{K}$, also feels relatively obvious.
+    However, whether it increases or decreases the amount of labor an employer
+    will demand is less obvious.
+    
+     \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Capital Scale Effect]
+    The capital scale effect refers to the phenomena whereby as the price of capital decreases, the quantity demanded of labor increases at every wage. Mathematically, $\frac{\partial q_{dL}(p)}{p_{K}} < 0$
+    \end{definition}
+    \end{tcolorbox}
+
+    Why?
+
+    The narrative is that when the price of capital goods declines, the firm can
+    produce output more cheaply, so at a given price, they will sell a larger
+    quantity. That is, they’ll produce at a larger scale, which may require more
+    labor, increasing the firm’s labor demand.
+
+    More specifically, the firm will be able to operate at new capacity
+    constraints and thus will be able to operate at new levels of diminishing
+    marginal productivity of labor.
+
+     \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Capital Substitution Effect]
+    The capital substitution effect refers to the phenomena whereby as the price of capital decreases, the quantity demanded of labor decreases at every wage. Mathematically, $\frac{\partial q_{dL}(p)}{p_{K}} > 0$
+    \end{definition}
+    \end{tcolorbox}
+
+    Why?
+
+    There are many tasks that can be done by either workers or machines. So,
+    when the price of these machines falls, the demand for workers to do tasks
+    that can be substituted for machines decreases.
+
+    Whether the capital or substitution effect dominates depends on whether
+    labor and capital are complements or substitutes in production at current
+    operation levels.
+
+    This can be assessed via the cross-price elasticity of labor and capital,
+    $\epsilon_{LK}$.
+
+    Labor Productivity, $A$
+
+    Why won’t they just lay them off?
+
+    Firms are assumed to be profit maximizing, not cost minimizing. Profit
+    maximization requires a balance between cost minimization and revenue
+    maximization.
+
+    Non-wage benefits, taxes, and subsidies, t, can also influence labor demand.
+
+    Many workers receive health insurance, retirement benefits, paid days off,
+    and other benefits from their employer.
+
+    Unemployment and Social Security Taxes
+
+    Mathematically, we can capture all of the determinants with the following
+    multivariate function $$q_{d}(w_{L},p, w_{K}, A, t)$$
+
+    All the factors that may shift individual labor demand curves also apply to
+    the market labor demand curve.However, for the labor market demand curve, there’s also an additional
+    determinant of demand. The number of employers, $N$.
+
+    \subsection{Labor Supply}
+
+    Just as before, a labor supply curve, is a function mapping quantities
+    demanded of labor by a household, $q_{s}(w)$, at every single wage, w.
+
+    Recall that The Law of Supply, is an economic principle that states holding
+    all other things constant, there is a direct relationship between the price
+    of a good and the quantity supplied of that good. The underlying assumption
+    that governed the law of supply was the assumption of diminishing marginal
+    product or diminishing marginal returns or increasing marginal costs
+
+    However, in the labor market, the underlying paradigm that governs the
+    relationship between the wage and the quantity of labor supplied is the
+    neoclassical model of labor-leisure choice and our assumptions about the
+    values of the labor income and substitution effects.
+
+    From the worker’s perspective the marginal benefit of labor is simply the
+    wage, or the income they receive to consume, $mb=w_{L}$.
+
+    As before, producers will keep producing units of a good or service until
+    they reach the quantity q where their marginal benefit is equal to their
+    marginal cost, $mb=mc$.
+
+    In this case the workers (or households) are the producers and the quantity
+    of the good they consider, is the quantity for labor, $q_{L}$.
+
+    Thus, the worker will continue to supply labor up until the marginal benefit
+    of labor is equal to the marginal cost of labor, $W_{L}=mc_{L}$.
+
+    But what is the marginal cost of labor, $mc_{L}$?
+
+    In the neoclassical model of labor-leisure choice we assume households
+    receive satisfaction both from the consumption of goods and from the
+    consumption of leisure.
+
+    Leisure is time spent not working.During this time households are assumed to be engaging in activities that
+    are relaxing or enjoyable and that do not necessarily involve the
+    consumption of goods.
+
+    However, in order to consume goods the household must labor. Thus, the
+    consumption of goods made possible by laboring is the opportunity
+    cost of leisure.
+
+    We’re making an assumption that the household dislikes working. This
+    assumption is not obvious. In fact there is evidence to suggest that
+    households see working as a source of meaning and purpose. We can postulate
+    that whether a household dislikes working is a function of the type of job
+    they chose. However, even households for whom being employed is an important
+    source of meaning, typically do not want to work every waking hour. Under
+    this paradigm assumptions about substitution and income effects
+    determine the shape of the labor supply curve curve.
+
+    In the context of labor supply, the Substitution Effect refers to the
+    tendency for individuals to work more when wages increase.
+
+    As wages rise, the financial reward for working becomes greater, making
+    leisure relatively more expensive. This encourages individuals to substitute
+    work for leisure, thereby increasing the amount of labor they supply.
+
+    The substitution effect implies that individuals will work more as the wage
+    goes up.
+
+    Namely, the labor supply curve characterized by
+
+    $q_{s}(w_{L})$ slopes upward or is an increasing function of the wage.
+
+    In the context of labor supply, the Income Effect refers to the tendency for
+    individuals to work less when their wages increase.
+
+    As wages rise, individuals become wealthier, which allows them to afford
+    more leisure without sacrificing their desired level of consumption.
+    Consequently, they may choose to work fewer hours, reducing the amount of
+    labor they supply.
+
+    The income effect implies you’ll work less as the wage goes up.
+
+    Namely, the labor supply curve characterized by $q_{s}(w_{L})$ slopes
+    downward or is a decreasing function of the wage.
+
+    The mathematical implication of this is that our models of individual labor
+    supply curves can be upward sloping, downward sloping, constant, or
+    ‘backward-bending’.
+
+    Whether the substitution or income effect dominates depends on a variety of
+    factors but determining which one dominates can be assessed via the price
+    elasticity of labor supply, $p_{L}$.
+
+    There’s been considerable empirical work dedicated to determining whether
+    the income or substitution effect dominates and in what scenarios.
+
+    For short term (or transitory) changes in wages, such as a wage increase
+    that lasts a week or a month,  the income effect will be modest and it seems
+    likely that the substitution effect will dominate.
+
+    However, for long-run changes in wage, such as a permanent raise or a
+    permanent tax cut, the income effect will be larger and it is not as clear
+    which will dominate.
+
+    Justin Wolfers and Jon Steisson suggest the income effect on labor supply is
+    slightly stronger than the substitution effect.\footnote{For an introductory discussion on the trade-off between
+    labor and leisure see Jon Steisson’s \href{https://eml.berkeley.edu/~jsteinsson/teaching/labor.pdf}{Work and Leisure notes}.}
+
+    Additional determinants of labor supply include the wage of other
+    occupations,  changing benefits of not working, and non-wage benefits,
+    income taxes, and employment subsidies.
+
+    Wage of other occupations, $w_{Ly}$.
+
+    Changing benefits of not working, $U$ Leisure.
+
+    Non-wage benefits, income taxes, and employment subsidies, $t$.
+
+    Mathematically, we can capture all of the determinants with the following
+    multivariate function $$q_{d}(w_{Lx}, w_{Ly},U_{Leisure}, t)$$
+
+    \subsubsection{Market Supply Curves}
+
+    Slope upwards due to new households joining the labor market.
+
+    At lower wages, only workers with lower reservation wages and fewer
+    alternatives participate in the labor market. As wages increase, however,
+    new groups of workers—such as students, retirees, or part-time workers—find
+    it worthwhile to supply labor.
+
+    All the factors that may shift individual labor supply curves also apply to
+    the market labor supply curve.
+
+    However, for the labor market supply curve, there’s also an additional
+    determinant of demand. The number of workers, $N$.
+
+    Competitive Equilibrium Model of the Labor Market and the Minimum Wage
+
+    In the competitive equilibrium model of the labor market the only cause of
+    unemployment is the minimum wage.
+
+    The minimum wage acts as a price floor for the labor market, thus creating a
+    surplus of labor or structural unemployment.
+
+    Frictional, cyclical, or seasonal unemployment do not exist in the
+    competitive equilibrium model of the labor market.
+
+    \subsection{Consequences and Criticisms of the competitive equilibrium model of the
+    labor market}
+
+    Some text here.\footnote{See Joseph Stiglitz’s Fostering More Competitive
+    Labor Markets (2020) for more information.}
+
+    \subsubsection{Consequences of the model}
+
+    Workers are paid according to the value of their marginal contributions.
+
+    All employers have to pay the same market wage for labor of a given quality,
+    which is measured by the worker’s productivity.
+
+    Executive salaries reflect managerial acumen.
+
+    If a worker does not like her job, she can quit it with little consequence
+    for herself or her family—­ she can find a similar job paying a similar wage
+    elsewhere.
+
+    No one has power to negotiate for a little more, and no employer has the
+    power to exploit any worker.
+
+    If the employer tried to do so, the worker would just up and leave, quickly
+    finding another employer who would not be exploitative.
+
+    \subsubsection{Criticisms of the model} 
+
+    Ignore market Power,aAsymmetric information, bargaining power
+
+    More and more, firms have demonstrated high and increasing levels of market
+    power (Philippon 2019; Stiglitz 2019).
+
+    At the same time, the bargaining power of workers has weakened.
+
+    An employer typically can find an alternative worker far more easily than a
+    worker can find an alternative employer.
+
+    The risk of having no job at all is an extremely serious and frightening
+    risk for those of us who need to provide for ourselves and our families.
+
+    Permissive antitrust enforcement has promoted concentration across
+    industries, reducing the number of employers—­ particularly those in rural
+    areas.
+
+    Firms have figured out that such asymmetry can weaken workers’ position and
+    lead to lower wages.
+
+    They have responded by doing what they can to increase these asymmetries,
+    sharing data with each other but insisting that workers keep their own
+    compensation data confidential, and punishing employees who violate such
+    confidentiality.
+
+    \subsection{Human Capital and Signaling}
+    
+      \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Signaling]
+        Signaling refers to transferring information to another party, often through
+    acquired, observable markers, with the target to resolve any information
+    asymmetries.
+    \end{definition}
+\end{tcolorbox}
+
+    
+
+    Higher education is thought to have a signaling component.
+
+    Efficiency wages
+
+    Compensating differential
+
+    Licensing
+
+    Minimum wage laws
+
+    Collective bargaining
+
+    Monopsony power
+
+    Wages vary due to diﬀerences in:
+
+    Labor demand and human capital
+
+    Labor supply and compensating diﬀerentials
+
+    Institutional factors
+
+    Discrimination
+
+    \newpage
+
+\section{Poverty and Inequality}
+
+    Income and Wealth
+
+    Income is
+
+    Wealth is
+
+    Income and Wealth Inequality
+
+    Quintiles
+
+    Facts
+
+    Inflation adjusted hourly wages for men have been stagnant from 1980 to 
+    2017 for the bottom decile and the median, but have increased for the top decile.
+    (“American’s Slow Motion Wage Crisis” Schmitt, Gould and Bivens, Sept 2018,)
+    From 2015 to 2022 wages between the 10th and 90th percentiles have compressed
+    reducing income inequality -- but only for states who raised there minimum wage.
+    (Aizer, Hoynes and Lleras-Muney 2022)
+
+Reductions in poverty occur with expansions in the Social Safety Net, or strong
+Labor Markets (Aizer, Hoynes and Lleras-Muney 2022). 
+Overall, labor is earning LESS of total national income.
+Prime-age, Male labor force participation rate has been declining since the 1950s, 
+and is now at its lowest level.
+Declines in U.S. female labor force participation started in 2000, then rebounded.
+Not a global issue, unique to U.S.
+
+The gini coefficient rose considerably from 1980 to 2020, with most of the increase
+occurring from 1980 to 2007, falling marginally after the Great Recession.
+
+Rising inequality at the top is NOT happening in all rich
+countries  (for example looking at the top decile of Europeans, or top 1 percent
+of Japaneese).
+(so not some inevitable force due to globalization,
+technological change, etc). Also not happening throughout our
+history.
+
+
+    Income inequality is rising
+
+    The rich are getting richers
+
+    The U.S. is more unequal than most developed nations
+
+    The distribution of income around the world is even more unequal.
+
+    Wealth inequality
+
+    Intergenerational Mobility
+
+    Perceptions
+
+    Poverty
+
+    Poverty Line
+
+    Poverty Rate
+
+    Absolute versus relative poverty
+
+    Facts
+
+    Most poverty spells are short, but most poor people are in long-term poverty.
+
+    XYZ is in poverty.
+
+    Social Insurance
+
+    Social safety net
+
+    Social insurance
+
+    Progressive taxation and income tax
+
+    Income and well-being
+
+    Redistribution issues
+
+    \newpage
+
+\section{Market Structure and Market Power}
+
+    \subsection{Markets}
+
+    Recall that, a market is a setting that brings potential producers (sellers)
+    and consumers (buyers) together.
+
+    The narrative (and philosophy) of markets is that they are successful at
+    generating well-being because they allocate resources efficiently through
+    the price mechanism, balancing supply and demand.
+
+    \subsection{Market Structures}
+
+    Recall that, a perfectly competitive market is a market that consists of
+    many sellers producing homogenous products.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Structure]
+        A market structure is the organizational framework that defines how
+        firms operate and compete within an industry to produce and sell goods
+        and services.
+    \end{definition}
+\end{tcolorbox}
+
+    It is one type of “market structure” but there are many others.
+
+    There are many market structures including:
+    \begin{enumerate}
+        \item Perfectly competitive markets
+        \item Monopolies
+        \item Oligopolies
+        \item Monopolistically competitive markets
+    \end{enumerate}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Monopoly]
+        A monopoly is a market structure that consists of a single seller or
+        producer and no close substitutes.
+    \end{definition}
+\end{tcolorbox}
+
+    Examples:
+
+    \begin{itemize}
+        \item Steel (Carnegie)
+        \item Diamonds (Debeer’s)
+        \item Zippers (YKK)
+        \item Public Utilities (PG\&E)
+    \end{itemize}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Oligopoly]
+        An oligopoly is a market structure that consists of a "few" large
+        sellers or producers.
+    \end{definition}
+\end{tcolorbox}
+
+    Examples
+
+    \begin{itemize}
+        \item Airlines
+        \item Automobile Manufacturers
+        \item Telecommunications
+        \item Soft Drinks Producers
+        \item Media and Entertainment
+        \item Insurance Industry
+        \item Pomegranates
+        \item Men’s Razors
+        \item Funeral Services
+        \item The list goes on…
+    \end{itemize}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Monopolistic Competition]
+        A monopolistically competitive market is a market structure that
+        consists of many sellers each selling a differentiated product.
+    \end{definition}
+\end{tcolorbox}
+
+    Examples:
+
+    \begin{itemize}
+        \item Burger joints
+        \item Pizza parlors
+        \item Coffee shops
+        \item Grocery stores
+        \item Hair salons
+    \end{itemize}
+
+    Each burger joint differentiates its product slightly to stand out. The
+    Habit produces peppered patties. In-n-out uses a thousand island dressing.
+    The local moma and pop-shop does “smashburgers”.
+
+    Broadening the definition of a market typically increases the level of
+    competition within that market, which can lead to a shift toward a more
+    competitive market structure.
+
+    Examples
+
+    We could consider a firm operating in the broader regional market, rather
+    than just a local one.
+
+    We could consider a firm operating in the broader market for sewing notions,
+    including buttons, Velcro, and zippers, rather than just in the more
+    narrowly defined market for zippers.
+
+    Many firms operate under oligopoly and monopolistically competitive market
+    structures – or Imperfect competition.
+
+    If very few firms operate in  perfectly competitive markets, why up until
+    now have we focused our study on them?
+
+    \begin{enumerate}
+        \item The First Fundamental Theorem of Welfare Economics, 
+        Perfect competition yields Pareto efficient – and thus allocatively
+        efficient– outcomes.
+        \item Mathematical simplicity. Namely, we lose price exogeneity and
+        the ability to linearly aggregate.
+    \end{enumerate}
+
+    \subsection{Market Power}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Market Power]
+        Market power, or pricing power, is the ability of a firm to influence
+        the price of a good or service by manipulating the supply or demand of
+        that good or service.
+    \end{definition}
+\end{tcolorbox}
+
+    Firms operating in perfect competition have no market power – they are price
+    takers.
+
+    A firm that is a monopoly has substantial market power – they are price markers.
+
+    A few firms operating in an oligopoly have significant market power, but
+    strategic competition among them limits their control compared to a
+    monopolist – they are price setters.
+
+    Many firms operating in a monopolistically competitive market have some
+    market power due to product differentiation, but their ability to influence
+    prices is limited by the presence of close substitutes and competition from
+    other firms.
+
+    \subsubsection{Implications of Market Power}
+
+    Market power allows firms to pursue independent pricing strategies.
+
+    If you’re in perfect competition, you have no market power and thus have no
+    real independent pricing strategy.
+
+    If you’re a monopoly, you just decide the price.
+
+    Market power makes decreases the firm’s price elasticity of demand, 
+    $\epsilon_{pd}$.
+
+    The firm’s inverse demand curve is more steep or more inelastic.
+
+    \subsubsection{Sources of market power}
+
+    \begin{enumerate}
+        \item Less competitors: The less businesses that operate in that market,
+        the less alternatives consumers have to buy elsewhere if you raise the
+        price.
+        \item Product Diﬀerentiation
+    \end{enumerate}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Product Differentiation]
+        Product differentiation is the process by which firms make their
+        products distinct from those of competitors, typically through
+        variations in quality, features, branding, or customer service.      
+    \end{definition}
+\end{tcolorbox}
+
+    Differentiation gives firms some market power as consumers perceive the
+    products as unique or preferable in some way.
+
+    \subsection{Measures of Market Power}
+
+    Lerner Index
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The Lerner Index]
+    The Lerner Index measures the pricing power of a firm by comparing the price
+    of its product to the marginal cost of production, $$L=\frac{P-mc}{P}$$
+    \end{definition}
+    \end{tcolorbox}
+
+    Challenges:
+
+    Requires Marginal Cost Data
+
+    Assumes Profit Maximization
+
+    Concentration Ratios and the HHI
+
+    Concentration Ratios
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[$N$-firm concentration ratio (CR)]
+    The $N$-firm concentration ratio (CR) is the sum of the percentage market
+    shares of $N$ of the largest firms in an industry. $$CR_{N}=\sum_{i}^{N}S_{i}$$
+    \end{definition}
+    \end{tcolorbox}
+
+    N=4 is quite common.
+
+    Herfindahl-Hirschman Index
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Herfindahl-Hirschman Index (HHI)]
+    The Herfindahl-Hirschman Index (HHI) measures market concentration by
+    summing the squares of the market shares of all firms in the industry.
+    $$HHI=\sum_{i}^{N}S_{i}^{2}$$
+    \end{definition}
+    \end{tcolorbox}
+
+    HHI ranges from 0 (perfect competition) to 10,000 (monopoly).
+
+    If there are 4 firms in a market with 25\% market share each and 7 firms in
+    a market 2 with 25\% market share each and 5 with 10\% market share each,
+    then the 2-Firm Concentration ratio would be equal but the HHI would be
+    higher for the first market.
+
+    HHI has continued to be used by antitrust authorities, primarily to evaluate
+    and understand how mergers will affect their associated markets.
+
+    Requires that you know which firms are in the industry and what the share of
+    each firm is. This can actually be quite difficult.
+
+    \subsection{Monopoly pricing}
+
+    \subsubsection{The Neoclassical Model of Pure Monopoly}
+
+    The Neoclassical Model of Pure Monopoly is characterized by the following
+    assumptions:
+
+    \begin{enumerate}
+        \item A single seller
+        \item A single product
+        \item A single price
+        \item A single time period
+        \item No substitutes
+        \item Barriers to entry
+        \item Perfect information
+        \item No externalities
+    \end{enumerate}
+
+    The firm knows its production costs and the demand curve, enabling it to
+    make optimal pricing and output decisions.
+
+    The implication of these assumptions is that the firm will set a
+    single-price, $p$, that takes into account both the price elasticity of
+    demand and its costs.
+
+    Why does the firm consider its own price elasticity of demand, $p_{d}$?
+
+    If the firm can only charge a single price, then under imperfect competition
+    the firm’s faces a trade-oﬀ between selling a larger quantity of items
+    versus making more money on each item you sell.
+
+    Why does it face that trade-off?
+
+    Remember the firm would like to maximize profits, which is the difference
+    between their revenue and costs, $\pi = R-C$.
+
+    Revenue is a function of the price and the quantity demanded, 
+    $R=p \cdot q_{d}(p)$,
+
+    But if diminishing marginal benefit kicks-in, then there’s an inverse
+    relationship between price and quantity demanded, $p,q_{d}(p)$. That is,
+    they move in opposite directions. So, there’s an inherent trade-off.
+
+    Mathematically, we can prove that the marginal revenue is a function of the
+    price elasticity of demand via the product rule,
+    $$MR(p) \triangleq \frac{dR}{dp}=q_{d}(p)+\frac{dq_{d}(p)}{dp} \cdot p
+    \implies MR(p, \epsilon_{pd})=q_{d}(p)(1+\epsilon_{pd})$$ .
+    Alternatively, we can derive a similar expression as a function of
+    quantities, making the firm’s optimality decision more clear,
+    $$MR(q)=MR(q) \iff p(q)(1+\epsilon_{pd})=mc(q)$$. It becomes more clear that the structure of
+    the firm’s marginal costs and it’s own price elasticity of demand inform
+
+    $q$ which also informs $p$.
+
+    When the monopolist chooses its price, $p$, it also chooses its quantity,
+    $q$, and vice-versa.
+
+    This interdependence can cause confusion about the narrative surrounding the
+    monopolist’s decision making process.
+
+    Does the monopolist choose the price first? Or do they choose the quantity
+    first?
+
+    In the model, they choose both simultaneously.
+
+    The real world is sequential.
+
+    The quantity narrative is, considering its own price elasticity of demand
+    and cost structure, the monopolist aiming to maximize economic profits,
+    restricts production below what a perfectly competitive firm would produce.
+    At that quantity, consumers bid up the price.
+
+    The price narrative is, considering its own price elasticity of demand and
+    cost structure, the monopolist aiming to maximize economic profits, sets a
+    price above what a perfectly competitive firm would choose. At this higher
+    price, consumer’s demand less and the producer restricts quantity to meet
+    that demand– rather than lower their price.
+
+    Regardless of the narrative presented, the conclusions of the model are the
+    same.
+
+    The consequences of a monopoly are:
+
+    \begin{enumerate}
+        \item Higher prices $P_{*}<P_{M}$
+        \item Underproduction $Q_{M}<Q_{*}$
+        \item Higher economic profit $\pi_{*}=0<\pi_{M}$
+        \item Allocative inefficiency $ES_{M}<ES_{*}$
+        \item Productive inefficiency $P_{*}=\min(\frac{C}{Q_{*}})<P_{M}$
+    \end{enumerate} 
+
+    \subsubsection{Monopolies and Dynamic Efficiency}
+
+    Driven by monopoly profits, a large firm operating in a concentrated market
+    is the main engine of technological progress.
+
+    Why?
+
+    R\&D projects typically involve large fixed costs, and these can only be
+    covered if sales are sufficiently large.
+
+    There are scale and scope economies in the production of innovations.
+
+    Large diversified firms are in a better position to exploit unforeseen
+    innovations.
+
+    Large firms can undertake many projects at any one time and hence spread the
+    risks of R\&D.
+
+    Implication is that there may be a trade-off between short run allocative
+    gains from increased price competition and long run welfare improvements
+    from a higher rate of innovation under a more concentrated structure.\footnote{As originally argued in Joseph Shumpeter’s Capitalism, Socialism and Democracy (1942) “As soon as we go into details and inquire into the individual items in which progress was most conspicuous, the trail leads not to the doors of those firms that work under conditions of comparatively free competition but precisely to the door of the large concerns – which, as in the case of agricultural machinery, also account for much of the progress in the competitive sector – and a shocking suspicion dawns upon us that big business may have had more to do with creating that standard of life than with keeping it down”.}
+
+    Little empirical evidence that market power and large firms stimulate
+    innovations
+
+    R\&D spending seems to rise more or less proportionally with firm size after
+    a certain threshold level has been passed, and there is little evidence of a
+    positive relationship between R\&D intensity and concentration in general.\footnote{See the OECD’s summary of the empirical literature, Innovation, Firm Size and Market Structure: Schumpeterian Hypotheses and Some New Themes (1996).}
+
+    \subsection{Economic Profit}
+
+    Accounting profit is the total revenue a business receives minus the firm’s
+    explicit financial costs, $R-C$.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Economic Profit]
+        Economic profit is the total revenue a firm receives minus both
+        explicit financial costs and the firm’s implicit opportunity costs,
+        forgone wages and interest.
+    \end{definition}
+\end{tcolorbox}
+
+    We assume firms focus on economic profits because they speak directly to the
+    question of whether it’s worth operating or not.
+
+    Economic profit is important for long-run analysis of firm entry and exit.
+
+    \subsection{Time horizons}
+
+    Short run versus long run
+
+    In microeconomics, the short-run refers to the period where some production
+    inputs like labor are variable while others like capital are fixed,
+    constraining firm entry or exit from an industry. \footnote{Sometimes this
+    is refered to as the Restricted period.}
+
+    In the short run, firms face a fixed set of competitors with given
+    production capacity, and their goal is simply to outcompete these existing
+    rivals.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The Short Run]
+        The short-run refers to the period where some production
+        inputs like labor are variable while others like capital are fixed,
+        constraining firm entry or exit from an industry.
+    \end{definition}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[The Long Run]
+        The long-run refers to the period where all production
+        inputs are variable and there are no constraints to firm entry or exit.
+    \end{definition}
+\end{tcolorbox}
+
+    In the long run, new rivals may enter or expand into a firm’s market, and
+    existing rivals can contract, or exit the market, and firm’s can adjust
+    their production capacity.
+
+    How long is the long run? There's no good answer.
+
+    \subsection{Free entry and exit in the long-run}
+
+    New competitors will enter profitable markets and existing firms exit
+    unprofitable markets helping to restore economic profitability.
+
+    New entrants decrease firm demand at every given price and decrease firm’s
+    economic profit.
+
+    Free entry pushes economic profits down to zero, in the long run but free
+    exit ensures industries won’t remain unprofitable in the long run.
+
+    \subsection{Barriers to entry}
+
+    Firm’s long run profitability depends on barriers to entry.
+
+    Four strategies:
+    \begin{enumerate}
+        \item Demand-side strategies
+        \item Supply-side strategies
+        \item Regulatory strategies
+        \item Deterrence strategies
+    \end{enumerate}
+
+    Demand-side strategies
+
+    Switching costs
+
+    Reputation and good-will
+
+    Network effects
+
+    Supply-side strategies - have to do with costs
+
+    Institutional knowledge about costs
+
+    Economics of scale
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Natural Monopoly]
+        A natural monopoly is a monopoly that arises in an industry where the
+        total cost of one firm, producing the total output, is lower than the
+        total cost of two or more firms producing the entire production.
+    \end{definition}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Economies of Scale]
+        Economies of Scale
+    \end{definition}
+    \end{tcolorbox}
+
+    Economies of scale refer to the cost advantages that a firm experiences as
+    it increases the scale of its production.
+
+    Economies of scale exist whenever the total cost of producing two quantities
+    of a product X is lower when a single firm instead of two separate firms
+    produce it.
+
+    Mathematically, $C((q_{1}+q_{2})x)<C(q_{1}x)+C(q_{2}x)$.
+
+    Natural monopolies exhibit economies of scale for two reasons:
+
+    The fixed capital costs are enormous.
+
+    There is low or no diminishing marginal productivity.
+
+    Examples:
+    \begin{itemize}
+        \item Utilities
+        \item Railways
+    \end{itemize}
+
+    The implication of this is that a new entrant will always be at a cost
+    disadvantage relative to the incumbent.
+
+    Natural monopolies are productively efficient but not allocatively
+    efficient.
+
+    As a result, government intervention can be necessary to reach the socially
+    efficient quantity.
+
+    Research and Development
+
+    Relationships with suppliers
+
+    Access to input markets
+
+    Regulatory strategies
+
+    Patents
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Patent]
+        A patent is a government granted exclusive right to produce and sell a
+        product or service for a specified period of time.
+    \end{definition}
+    \end{tcolorbox}
+
+    A patent is a government sponsored monopoly on an invention.
+
+    Patents present a trade-oﬀ between underproduction and innovation.
+
+    Patents create deadweight loss and are thus allocatively inefficient.
+
+    Regulations
+
+    Compulsory licenses
+
+    Lobbying
+
+    Deterrence strategies
+
+    Predatory pricing
+
+    Excess capacity
+
+    Liquid assets
+
+    \subsection{Competition Policy}
+
+    Collusion is secretive agreement between firms to limit competition.
+
+    Colluding firms can effectively agree to act as if they were a single
+    entity—a monopolist—rather than cut-throat competitors. This raises their
+    profits, at consumers’ expense.
+
+    Merger laws prevent competing businesses from combining to consolidate
+    market power.
+
+    Being a monopoly is legal; monopolizing a market isn’t. The noun,
+    “monopoly, ” is legal; the verb, to “monopolize” is not. It’s about
+    whether the firm is engaging in exclusionary practices.
+
+    pushing your suppliers to not sell to your competitors
+
+    requiring stores that want to sell your product to not sell the products of
+    your competitors.
+
+    charging a price so low that they’ll force you out of business
+
+
+    \section{Sophisticated Pricing Strategies}
+
+    \subsection{Price discrimination}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Price Discrimination]
+        Price Discrimination
+    \end{definition}
+    \end{tcolorbox}
+
+    Price discrimination is a pricing strategy for selling the same good at
+    diﬀerent prices.
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Perfect Price Discrimination]
+        Perfect Price Discrimination
+    \end{definition}
+    \end{tcolorbox}
+
+    Perfect Price discrimination is a strategy of charging each customer their
+    reservation price.
+
+    In practice this is very difficult.
+
+    Price discrimination leads to higher prices for some and lower prices for
+    others.
+
+    Price discrimination is only feasible if:
+
+    Your business has market power
+
+    You can prevent resale
+
+    Otherwise, the people who qualify for low prices will buy your product
+    cheaply and then resell it to the folks you were hoping to charge a high
+    price to.
+
+    You can target the right prices to the right customers
+
+    Group pricing
+
+    \newpage
+
+\section{Game Theory and Oligopoly}
+
+\subsection{Game Theory}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Strategic Interaction]
+    A strategic interaction is a situation in which the outcome for one or more
+    individuals or groups depends on the choices made by all participants in the
+    interaction.
+\end{definition}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Game Theory]
+    Game Theory is the study of strategic interactions.
+\end{definition}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Game, Player, Payoff]
+    In the context of Game Theory,
+    \begin{enumerate}
+        \item A game refers to a formalized model of a strategic interaction.
+        \item A player refers to an individual, entity, or agent that
+        participates in a game.
+        \item A payoff refers to the outcome or result that a player receives
+        from a game.
+    \end{enumerate} 
+\end{definition}
+\end{tcolorbox}
+
+Payoffs are usually represented by payoff matrices or payoff functions.
+Example of payoff matrix
+
+
+\subsubsection{Temporal structure}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Simultaneity]
+    In Game Theory , simultaneity refers to the condition in which multiple players make their
+    decisions at the same time, without knowledge of the choices made by other
+    players.
+\end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Sequentiality]
+    In Game Theory, sequentiality refers to the condition in which players make
+    decisions one after another, with each player having knowledge of the
+    previous players' choices.
+\end{definition}
+    \end{tcolorbox}
+
+\subsubsection{Strategies and Best Responses}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Best Response]
+    A best response is a strategy that yields the highest possible payoff for a
+    player, given the strategies chosen by the other players.
+\end{definition}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Best Response Function]
+    The best response function is a concept in game theory that identifies the
+    optimal strategy a player should choose, given the strategies of other
+    players in the game.
+    $$BR_{i}(s_{-i}) = \text{argmax}_{s_i} u_{i}(s_{i}, s_{-i})$$
+\end{definition}
+    \end{tcolorbox}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Dominant Strategy]
+    A dominant strategy is a strategy that is the best response for a player
+    regardless of what strategies the other players choose. That is, it yields a
+    higher payoff than any other strategy, no matter what the other players do.
+    $BR_{i}(s_{-i}) =a.$
+\end{definition}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[Nash Equilibrium]
+    A Nash equilibrium is a situation in which each player’s strategy is a best
+    response to the strategies of the other players, meaning no player has an
+    incentive to unilaterally deviate from their strategy.
+    $$ (s^{*}_{1}, s^{*}_{2},...,s^{*}_{N}) \rightarrow s_{i}^{*} \in BR_{i}(s^{*}_{-i}) \forall i$$
+\end{definition}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=white,boxrule=0pt]
+\begin{definition}[The Prisoner’s Dilemma]
+The Prisoner’s Dilemma is a classic game in Game Theory involving two rational
+agents, each of whom can either cooperate for mutual benefit or betray their
+partner for individual gain. 
+\end{definition}
+\end{tcolorbox}
+The dilemma arises from the fact that while defecting is rational for each agent,
+cooperation yields a higher payoff for each.
+
+It demonstrates that individuals pursuing their own objectives can lead to
+allocatively inefficient outcomes.
+
+\subsection{Oligopoly Models}
+
+Unlike in perfect competition or monopoly, where firms can act independently,
+firms in oligopolistic markets operate in a setting of strategic interactions.
+Game theory provides a powerful framework for analyzing these interactions.
+
+\subsubsection{Cournot Model of Competition}
+Some text here \footnote{See Cournot’s The Mathematical Principles of the Theory of Wealth (1838)}
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Cournot Model of Competition]
+        The Cournot Model of Competition
+    \end{definition}
+    \end{tcolorbox}
+
+    Assumptions:
+    \begin{enumerate}
+        \item Homogenous products
+        \item $N$ firms, infinite amount of buyers
+        \item Firms select quantity
+        \item Perfect Information
+        \item No transaction costs
+        \item Simultaneity
+    \end{enumerate}
+
+    Best Response
+
+    Equilibrium
+
+    Examples
+
+    Agriculture \footnote{See David Flath’s Are There Any Cournot Industries?
+    (2010)}
+
+    As $N$ grows to infinity the model becomes consistent with Perfect
+    Competition.
+
+
+    The DWL also decreases
+
+    In Cournot, the firm with the largest market share is the most efficient.
+
+    The Cournot model is often times criticized because in reality firms tend to
+    choose prices not quantities
+
+    Cournot model is applicable in markets where the firm must make production
+    decisions in advance and must be committed to selling that quantity level;
+    thus, unlikely to react to fluctuations in rival's quantity produced.
+
+    For example, in cement or steel production.
+
+\subsubsection{Bertrand Model of Competition}
+Some text here \footnote{See Betrand’s Théorie Mathématique de la Richesse Sociale (1883)}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Betrand Model of Competition]
+        The Betrand Model of Competition
+    \end{definition}
+    \end{tcolorbox}
+
+    Assumptions:
+    \begin{enumerate}
+        \item Firms select price
+    \end{enumerate}
+
+Exemplifying theory, The equilibrium price equals marginal cost (similar to
+perfect competition).
+
+ The Bertrand model is applicable in markets where consumers are relatively price elastic
+capacity is sufficiently flexible and firms are capable to meet any market
+demand that arises at price level, which they set
+
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Stackleberg Model of Competition]
+        The Betrand-Edgeworth Model of Competition
+    \end{definition}
+    \end{tcolorbox}
+
+Modification of canonical Betrand model.
+If both firms have very low capacity, prices can remain above marginal cost —
+unlike in the standard Bertrand model.
+
+\subsubsection{Stackleberg Model of Competition}
+Some text here \footnote{Stackelberg's Market Structure and Equilibrium (1934)}
+
+    \begin{tcolorbox}[colframe=white,boxrule=0pt]
+    \begin{definition}[Stackleberg Model of Competition]
+        The Stackleberg Model of Competition
+    \end{definition}
+    \end{tcolorbox}
+
+    Assumptions:
+    \begin{enumerate}
+        \item Sequentiality
+        \item Firms select quantity
+        \item First mover advantage: The leader anticipates the follower's best
+        response
+    \end{enumerate}
+
+More competitive than Cournot (lower prices, higher total output)
+Asymmetric equilibrium leads to higher profits for the leader.
+More competitive equilibrium than first
+The Stackelberg Model is applicable in markets where
+one firm has technological superiority, brand power, or early market entry
+
+
+    Conclusions:
+    \begin{enumerate}
+        \item More allocatively efficient than Cournot
+    \end{enumerate}
+
+\subsubsection{Collusive Oligopoly (Cartel) Models}
+Some text here \footnote{See Matt Shun’s lecture notes on \href{https://www.its.caltech.edu/~mshum/ec105/matt5.pdf}{Collusion and Cartels
+in Oligopoly} for more information.}
+
+Assumptions
+Firms agree to restrict output or fix prices
+Aim to maximize joint profits (like a monopolist)
+Require enforcement mechanism to sustain collusion
+Results
+Higher prices, lower output compared to non-collusive oligopoly
+Incentive to cheat can make collusion unstable
+
+    \newpage
+
+\section{History of Economic Theory}
+\subsection{Microeconomic Theory}
+\subsubsection{Consumer Theory}
+
+The development of consumer theory spans over a century of contributions that have progressively formalized and mathematized the way economists understand individual decision-making. Below is a historical overview organized by century.
+
+\paragraph{1800s}
+
+\begin{itemize}
+    \item \textbf{William Stanley Jevons (1835--1882)}: Published \textit{The Theory of Political Economy} (1871), in which he introduced marginal utility as a central concept in consumer choice.
+    \item \textbf{Carl Menger (1840--1921)}: Founder of the Austrian School; in his \textit{Principles of Economics} (1871), he independently developed a marginalist perspective, emphasizing individual valuation.
+    \item \textbf{Léon Walras (1834--1910)}: In \textit{Elements of Pure Economics} (1874), he formalized the concept of general equilibrium, providing a mathematical foundation for market interactions, including consumer behavior.
+    \item \textbf{Francis Ysidro Edgeworth (1845--1926)}: In \textit{Mathematical Psychics} (1881), he introduced the Edgeworth box and anticipated indifference curve analysis.
+    \item \textbf{Vilfredo Pareto (1848--1923)}: In \textit{Manual of Political Economy} (1896), he advanced the ordinal approach to utility and developed the concept of Pareto efficiency.
+\end{itemize}
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Eugen Slutsky (1880--1948)}: Published a mathematical derivation of consumer demand in \textit{The Theory of the Budget Constraint} (1915), leading to the decomposition of the price effect into income and substitution effects.
+    \item \textbf{John Hicks (1904--1989)}: In \textit{Value and Capital} (1939), he further developed indifference curve analysis and formalized the Slutsky equation.
+    \item \textbf{Paul Samuelson (1915--2009)}: His \textit{Foundations of Economic Analysis} (1947) used revealed preference theory to replace cardinal utility assumptions with observable behavior.
+    \item \textbf{Federico Echenique (b. 1970) and others}: Extending classical models to accommodate stochastic, noisy, and high-dimensional choice data. His work bridges classical consumer theory with modern empirical datasets and behavioral considerations.
+\end{itemize}
+
+\subsubsection{Producer Theory}
+
+Producer theory investigates how firms transform inputs into outputs and make decisions to maximize profit or minimize cost. The development of this theory evolved alongside marginalist and neoclassical traditions, incorporating increasing mathematical formalism over time.
+
+\paragraph{1800s}
+
+\begin{itemize}
+    \item \textbf{Johann Heinrich von Thünen (1783--1850)}: In \textit{The Isolated State} (1826), von Thünen developed one of the earliest spatial models of agricultural production and land use, incorporating transportation costs and marginal productivity.
+    \item \textbf{Léon Walras (1834--1910)}: His \textit{Elements of Pure Economics} (1874) formalized general equilibrium theory, including the behavior of firms as cost-minimizing, profit-maximizing agents within competitive markets.
+    \item \textbf{Alfred Marshall (1842--1924)}: In \textit{Principles of Economics} (1890), Marshall introduced the concept of the firm and industry supply, distinguishing between short-run and long-run cost structures and emphasizing marginal analysis.
+    \item \textbf{Philip Wicksteed (1844--1927)}: In \textit{An Essay on the Coordination of the Laws of Distribution} (1894), he applied marginal productivity theory to explain how factor payments (wages, rents, profits) are determined by their contribution to output.
+    \item \textbf{Vilfredo Pareto (1848--1923)}: In \textit{Manual of Political Economy} (1896), he contributed to production theory through general equilibrium analysis and the concept of efficiency in allocation across producers.
+\end{itemize}
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Paul Douglas (1892--1976) and Charles Cobb (1886--1954)}: In their joint paper (1928), they introduced the Cobb-Douglas production function, which became foundational in representing the relationship between inputs (capital and labor) and output.
+    \item \textbf{John Hicks (1904--1989)}: In \textit{Value and Capital} (1939), Hicks elaborated on production and cost functions within a general equilibrium framework, providing tools for analyzing producer behavior under various market structures.
+\end{itemize}
+
+\subsubsection{Equilibria}
+
+The concept of equilibrium lies at the heart of economic analysis, representing a state where supply equals demand, and no agent has the incentive to change their behavior. The evolution of equilibrium theory has moved from qualitative insight to rigorous mathematical formalization.
+
+\paragraph{1700s}
+
+\begin{itemize}
+    \item \textbf{Adam Smith (1723--1790)}: In \textit{The Wealth of Nations} (1776), Smith introduced the idea of the "invisible hand," a metaphor for the self-regulating nature of markets where individual pursuit of self-interest leads to socially optimal outcomes, a precursor to equilibrium thinking.
+\end{itemize}
+
+\paragraph{1800s}
+
+\begin{itemize}
+    \item \textbf{Antoine Augustin Cournot (1801--1877)}: Developed one of the first formal models of market equilibrium in oligopoly settings, analyzing how firms interact strategically in quantity-setting competition.
+    \item \textbf{Léon Walras (1834--1910)}: In \textit{Elements of Pure Economics} (1874), Walras presented the first formal general equilibrium model, showing how markets for multiple goods could reach equilibrium simultaneously through a tâtonnement process.
+    \item \textbf{Francis Ysidro Edgeworth (1845--1926)}: In \textit{Mathematical Psychics} (1881), Edgeworth developed the concept of the contract curve and the Edgeworth box, offering a graphical representation of the core and possible equilibria in exchange economies.
+    \item \textbf{Vilfredo Pareto (1848--1923)}: Extended Walrasian general equilibrium theory and introduced the concept of Pareto efficiency, characterizing allocations from which no individual can be made better off without making another worse off.
+\end{itemize}
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Kenneth Arrow (1921--2017) and Gérard Debreu (1921--2004)}: In their landmark paper \textit{Existence of an Equilibrium for a Competitive Economy} (1954), they provided a rigorous proof of the existence of a general equilibrium using fixed-point theorems, formalizing conditions under which markets can reach a state of equilibrium.
+\end{itemize}
+
+\subsubsection{Public Economics}
+
+Public economics examines the role of government in the economy, addressing issues such as taxation, public goods, externalities, and income redistribution. The evolution of this field reflects a growing emphasis on formal analysis and welfare criteria for evaluating government policy.
+
+\paragraph{1700s}
+
+\begin{itemize}
+    \item \textbf{Adam Smith (1723--1790)}: In \textit{The Wealth of Nations} (1776), Smith outlined foundational principles for taxation—efficiency, equity, certainty, and convenience—and emphasized the state’s responsibility to provide public goods such as defense, justice, and infrastructure.
+\end{itemize}
+
+\paragraph{1800s}
+
+\begin{itemize}
+    \item \textbf{David Ricardo (1772--1823)}: In \textit{On the Principles of Political Economy and Taxation} (1817), Ricardo analyzed the incidence of taxation and its effects on income distribution, particularly focusing on land rent and the burden of public debt.
+\end{itemize}
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Arthur Cecil Pigou (1877--1959)}: In \textit{The Economics of Welfare} (1920), Pigou introduced the concept of externalities and advocated corrective taxes—later called Pigouvian taxes—to address market failures due to social costs or benefits not reflected in market prices.
+    \item \textbf{Paul Samuelson (1915--2009)}: In \textit{Foundations of Economic Analysis} (1947), Samuelson developed the theory of public goods and clarified the conditions under which market mechanisms fail to provide efficient allocations, laying the groundwork for modern welfare economics.
+    \item \textbf{Richard Musgrave (1910--2007)}: In \textit{The Theory of Public Finance} (1959), Musgrave provided a comprehensive framework for analyzing public expenditure and taxation, proposing a three-branch model of government functions: allocation, distribution, and stabilization.
+\end{itemize}
+
+\subsubsection{Industrial Organization}
+
+Industrial organization studies how firms compete, the structure of markets, and the strategic behavior of agents in non-competitive environments. It has evolved from early formal models of oligopoly to contemporary game-theoretic and regulatory analyses.
+
+\paragraph{1800s}
+
+\begin{itemize}
+    \item \textbf{Augustin Cournot (1801--1877)}: In \textit{Researches into the Mathematical Principles of the Theory of Wealth} (1838), Cournot developed one of the first formal models of duopoly, analyzing quantity competition between firms—a foundational result in oligopoly theory.
+    \item \textbf{Joseph Bertrand (1822--1900)}: In \textit{Théorie Mathématique de la Richesse Sociale} (1883), Bertrand critiqued Cournot's model and proposed price competition instead of quantity competition, leading to very different equilibrium outcomes.
+\end{itemize}
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Harold Hotelling (1895--1973)}: In \textit{Stability in Competition} (1929), Hotelling introduced spatial competition and the principle of minimum differentiation, modeling how firms choose location (or product characteristics) in response to consumer distribution.
+    \item \textbf{Edward Chamberlin (1899--1967) and Joan Robinson (1903--1983)}: Independently introduced theories of monopolistic and imperfect competition in 1933. Chamberlin’s \textit{The Theory of Monopolistic Competition} formalized markets where firms sell differentiated products, while Robinson developed parallel insights in \textit{The Economics of Imperfect Competition}.
+    \item \textbf{John Nash (1928--2015)}: In \textit{Non-Cooperative Games} (1951), Nash introduced what is now known as the Nash equilibrium, a key concept in strategic interaction and the basis for modern game-theoretic approaches to industrial organization.
+    \item \textbf{Avinash Dixit (1943--) and Joseph Stiglitz (1943--)}: In their 1977 paper \textit{Monopolistic Competition and Optimal Product Diversity}, they modeled preferences over differentiated goods using CES utility functions, formalizing conditions for optimal product variety under monopolistic competition.
+    \item \textbf{Jean Tirole (1953--)}: In \textit{The Theory of Industrial Organization} (1988), Tirole synthesized decades of research using game theory to model firm behavior, regulation, market structure, and competition policy, becoming a foundational text for the modern field.
+\end{itemize}
+
+\subsubsection{Information Economics}
+
+Information economics explores how asymmetric or incomplete information affects market outcomes, contract design, and strategic behavior. It represents a significant departure from classical assumptions of perfect information, highlighting inefficiencies and new forms of market failure.
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{George Akerlof (1940--)}: In \textit{The Market for Lemons: Quality Uncertainty and the Market Mechanism} (1970), Akerlof showed how asymmetric information between buyers and sellers can lead to adverse selection, causing high-quality goods to be driven out of the market.
+    \item \textbf{Michael Spence (1943--)}: In \textit{Job Market Signaling} (1973), Spence introduced the concept of signaling in labor markets, demonstrating how individuals can use education as a costly signal of productivity to overcome information asymmetries.
+    \item \textbf{Joseph Stiglitz (1943--)}: In \textit{Equilibrium in Competitive Insurance Markets} (1974), Stiglitz, along with Michael Rothschild, analyzed how insurance markets function under asymmetric information, illustrating the role of screening and the potential for market breakdown.
+\end{itemize}
+
+\subsubsection{Behavioral Economics}
+
+Behavioral economics integrates insights from psychology into economic models to better understand how individuals make decisions. It challenges the assumption of fully rational agents by highlighting systematic biases, heuristics, and bounded rationality.
+
+\paragraph{1900s}
+
+\begin{itemize}
+    \item \textbf{Herbert Simon (1916--2001)}: In \textit{Models of Man} (1957), Simon introduced the concept of \textit{bounded rationality}, arguing that individuals satisfice rather than optimize due to cognitive limitations and incomplete information.
+    \item \textbf{Amos Tversky (1937--1996) and Daniel Kahneman (1934--)}: In \textit{Judgment under Uncertainty: Heuristics and Biases} (1974), they documented common decision-making heuristics—such as representativeness, availability, and anchoring—that systematically deviate from rationality.
+    \item \textbf{Daniel Kahneman and Amos Tversky}: In \textit{Prospect Theory: An Analysis of Decision under Risk} (1979), they proposed an alternative to expected utility theory, showing that individuals evaluate gains and losses relative to a reference point and are loss-averse.
+    \item \textbf{Richard Thaler (1945--)}: A pioneering figure in applying behavioral insights to economics, Thaler contributed to theories of mental accounting, self-control, and fairness. His work helped lay the foundation for \textit{nudge theory}, influencing public policy and decision architecture.
+\end{itemize}
+
+
+    \subsection{Macroeconomic Theory}
+    
+    \newpage
+
+\section{Appendix}
+
+    \subsection{Algebra Review}
+
+    \subsubsection{Lines}
+
+    $y=mx+b$, is the equation of a line, where $m$ is the slope and $b$ is the
+    $y$-intercept. Two examples of lines are presented in the image below. In
+    the blue line the slope, $m$, is 2 and the $y$-intercept, $b$, is $-4$. The
+    red line has a slope of 12 and the $y$-intercept is 5.
+
+    Given two points you can find the slope of the line $m=\frac{y_{2}-y_{1}}
+    {x_{2}-x_{1}}$.
+
+    \subsubsection{$X$ and $Y$ intercepts}
+
+    
+
+    The $y$\textbf{-intercept} is defined as the point $(x_{1},y_{1})$ where the line
+    $y=mx+b$ crosses the $y$-axis. Namely, $(x_{1}=0,y_{1})$.
+
+    The $x$\textbf{-intercept} is defined as the point $(x_{1},y_{1})$ where the line
+    $y=mx+b$ crosses the $x$-axis. Namely, $(x_{1},y_{1}=0)$.
+
+    \subsubsection{Functions}
+
+    At some point in middle or high-school you were introduced to function
+    notation. Namely, rather than $y=mx+b$ you were asked to write $f(x)=mx+b$ or
+    $f(x)=mx+f(x_{0})$.
+
+    \textbf{Function notation} makes clear to the reader what values “go in” and what
+    values “come out”.
+
+    \subsubsection{Inverse Functions}
+
+    Typically, we are given a function’s output $y$ in terms of its input $x$,
+    $y=f(x)$. That is, $y$ is a function of $x$. However, sometimes we want $x$
+    in terms of $y$. Namely, $x=f(y)$. We refer to $f(y)$ as the \textbf{inverse
+    function} of $f(x)$.
+
+    \subsubsection{Finding Intersections}
+
+    Sometimes we are interested in where two functions intersect (or cross). To
+    solve where two functions cross on the same graph, if they cross at all, we
+    equate the two functions. Namely, for two functions $f(x), g(x)$ we solve
+    the equality $f(x)=g(x)$ for $x$. We then substitute the value of $x$ into
+    either function to solve for $f(x),g(x)$.
+
+    Substituting x into either function $f(x), g(x)$ should result in the same
+    answer.
+
+    \subsubsection{Equal Signs}
+    Early in your education you were shown the equal sign, $=$. However,
+    sometimes its not entirely clear what the equal sign is trying to convey.
+    Sometimes we mean that the left side is always equal to the right side. 
+    Sometimes we're introducing a new term and want you to know that what is on
+    the left is replaceable with what is on the right.
+    Sometimes we're specifying a condition, that if true something happens. For
+    example, something is defined some way or some action is taken. In these cases
+    what is on the left is not always replaceable with what is on the right.
+    \begin{enumerate}
+        \item Equivalency $\equiv$
+        \item Definition $:=$ or $\triangleq$
+        \item Conditional equality $=$ 
+    \end{enumerate}
+
+
+    \subsubsection{Derivatives}
+
+    Not all functions are linear. For example, $f(x) = x^{2}$.
+
+    The function does not have a constant slope, $m$. That is, the slope changes
+    depending on where we are on the graph. However, we can express the slope of
+    the function at every point $(x,f(x))$ using the derivative of the function
+    $f'(x) = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$.
+
+    The only derivative rule worth knowing for now is the derivative rule for a
+    polynomial. Namely, if $f(x) = ax^{n}$, then $f'(x)=nax^{n-1}$.
+
+    We’ll reserve the rest of calculus for upper division economics.
+
+    \newpage
+    \subsection{Additional Resources}
+    For highly motivated students, the following playlists offer a wealth of
+    information nearly equivalent to the standard undergraduate economics
+    curriculum.
+
+    \subsubsection{Microeconomics}
+    \textit{Core}
+    \begin{enumerate}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP62oJSoqb4Rf-vZMGUBe59G-}{Principles of Microeconomics, Gruber, MIT}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP63wnrKge9vllow3Y2OOOKqF}{Intermediate Microeconomic Theory, Townsend, MIT}
+        \item \href{https://www.youtube.com/playlist?list=PLrjFsIvohyxgsb_R9lfIz5CT0OlettCeL}{Intermediate Microeconomic Theory according to Varian, West, Baylor University}
+    \end{enumerate}
+    \textit{Applied}
+    \begin{enumerate}
+        \item \href{https://www.youtube.com/playlist?list=PL2SOU6wwxB0v3c46v2ptuDKIHmXHRAmeU}{Public Economics, Chetty, Harvard}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP61kvh3caDts2R6LmkYbmzaG}{Development Economics, Duflo, MIT}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP62xkEY0YzLJSoquVBjPOl9S}{Industrial Organization I, Ellison, MIT}
+        \item \href{https://youtube.com/playlist?list=PLeY-lFPWgBTi477d0mp2wuwlwtvS8rEaQ&si=JjwElMvPVaMX_o61}{Game Theory, Jackson, Shoham, Leyton-Brown, Stanford}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q}{Psychology and Economics, Schilbach, MIT}
+        \item \href{https://www.youtube.com/playlist?list=PLHwUrKo7SDpTRZ5mAQaMsuYJor1kakKMr}{Philosophy of Economics, Hoyningen, University of Zurich}
+    \end{enumerate}
+
+    \subsubsection{Macroeconomics}
+    \textit{Core}
+    \begin{enumerate}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP62EXoZ4B3_Ob7lRRwpGQxkb}{Principles of Macroeconomics, Caballero, MIT}
+        \item \href{https://www.youtube.com/playlist?list=PLJZlW3ik4xixAhVnY0aaTrz72XCZsygEA}{Intro to Advanced Macroeconomic Analysis, Burda, Humboldt University}
+    \end{enumerate}
+    \textit{Applied}
+    \begin{enumerate}
+        \item \href{https://www.youtube.com/playlist?list=PL83B4B627169D52BB}{Financial Economics, Geanakoplos, Yale}
+        \item \href{https://www.youtube.com/playlist?list=PL8FB14A2200B87185}{Financial Markets, Shiller, Yale}
+        \item \href{https://www.youtube.com/playlist?list=PLUl4u3cNGP63-t0r0aC3noJiIOmj33S_Q}{Development Economics: Macroeconomics, Townsend, MIT}
+    \end{enumerate}
+
+    \end{document}
